@@ -1,6 +1,6 @@
 import type { IUrlRepository } from '../db/types';
 import type { ShortUrl } from '../types';
-import { dump } from 'js-yaml';
+import { dumpClashWithInlineProxies } from '../shared/yaml';
 import { DEFAULT_CONFIG } from '../config';
 import { Confuse } from '../core/confuse';
 import { Restore } from '../core/restore';
@@ -17,7 +17,17 @@ export class UrlService {
         const confuse = new Confuse(env);
         await confuse.setSubUrls(request);
 
-        const restore = new Restore(confuse);
+            const restore = new Restore(confuse);
+            if (['clash', 'clashr'].includes(convertType)) {
+                const originConfig = await restore.getClashConfig();
+                const yaml = dumpClashWithInlineProxies(originConfig);
+                return new Response(yaml, {
+                    headers: new Headers({
+                        'Content-Type': 'text/yaml; charset=UTF-8',
+                        'Cache-Control': 'no-store'
+                    })
+                });
+            }
 
         if (['clash', 'clashr'].includes(convertType)) {
             const originConfig = await restore.getClashConfig();
