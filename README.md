@@ -180,6 +180,35 @@ pnpm docker:build   # 等价于 docker build -t sub-convert .
 pnpm docker:run     # 使用默认 env 启动一个临时容器
 ```
 
+#### 方式四：通过 Wrangler CLI 本地部署(适合开发者)
+
+1. 安装依赖：
+```bash
+npm install
+```
+
+2. 安装 Wrangler CLI（如果尚未安装）：
+```bash
+npm install -g wrangler
+```
+
+3. 登录到 Cloudflare（如果尚未登录）：
+```bash
+wrangler login
+```
+
+4. 部署项目：
+```bash
+npm run deploy
+```
+或者
+```bash
+wrangler deploy
+```
+
+
+这种方式使用 Wrangler CLI 工具直接将项目部署到 Cloudflare Workers。适合开发者直接在本地进行开发和部署，不需要通过 Cloudflare Dashboard 进行手动操作。
+
 ### 🔗 访问地址
 
 - Worker 部署：`https://your-worker-name.your-subdomain.workers.dev`
