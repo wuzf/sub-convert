@@ -56,7 +56,7 @@ jobs:
             - name: Deploy to release branch
               uses: peaceiris/actions-gh-pages@v4
               with:
-                  github_token: ${{ secrets.DEPLOY_TOKEN }}
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: dist/worker
                   publish_branch: release
                   keep_files: false
