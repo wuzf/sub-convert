@@ -50,6 +50,14 @@ export function getRemoteConfig(env: Env): { label: string; value: string }[] {
                 value: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini'
             },
             {
+                label: 'ACL4SSR_Online_Full_Google 全分组 谷歌版 (与Github同步)',
+                value: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Google.ini'
+            },
+            {
+                label: 'ACL4SSR_Online_Full_MultiMode 全分组 多模式版 (与Github同步)',
+                value: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini'
+            },
+            {
                 label: 'ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)',
                 value: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini'
             },
