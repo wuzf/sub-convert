@@ -1,6 +1,6 @@
 import type { IUrlRepository } from '../db/types';
 import type { ShortUrl } from '../types';
-import { dump } from 'js-yaml';
+import { dumpClashWithInlineProxies } from '../shared/yaml';
 import { DEFAULT_CONFIG } from '../config';
 import { Confuse } from '../core/confuse';
 import { Restore } from '../core/restore';
@@ -22,7 +22,7 @@ export class UrlService {
         if (['clash', 'clashr'].includes(convertType)) {
             const originConfig = await restore.getClashConfig();
             return {
-                body: dump(originConfig, { indent: 2, lineWidth: 200 }),
+                body: dumpClashWithInlineProxies(originConfig),
                 contentType: 'text/yaml; charset=UTF-8'
             };
         }
