@@ -1582,7 +1582,7 @@ function Er() {
     <\/script>`;
 }
 const ft = Ut();
-function Lr() {
+function Or() {
   return `
     <script>
         class SubSelect extends HTMLElement {
@@ -2066,7 +2066,7 @@ function Lr() {
         customElements.define('sub-select', SubSelect);
     <\/script>`;
 }
-function Or() {
+function Lr() {
   return `
     <script>
         class SubTextarea extends HTMLElement {
@@ -2269,63 +2269,63 @@ function Pr(e) {
     [
       {
         label: "ACL4SSR_Online 默认版 分组比较全 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
       },
       {
         label: "ACL4SSR_Online_AdblockPlus 更多去广告 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
       },
       {
         label: "ACL4SSR_Online_NoAuto 无自动测速 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
       },
       {
         label: "ACL4SSR_Online_NoReject 无广告拦截规则 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
       },
       {
         label: "ACL4SSR_Online_Mini 精简版 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"
       },
       {
         label: "ACL4SSR_Online_Mini_AdblockPlus.ini 精简版 更多去广告 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
       },
       {
         label: "ACL4SSR_Online_Mini_NoAuto.ini 精简版 不带自动测速 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_NoAuto.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_NoAuto.ini"
       },
       {
         label: "ACL4SSR_Online_Mini_Fallback.ini 精简版 带故障转移 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
       },
       {
         label: "ACL4SSR_Online_Mini_MultiMode.ini 精简版 自动测速、故障转移、负载均衡 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"
       },
       {
         label: "ACL4SSR_Online_Full 全分组 重度用户使用 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
       },
       {
         label: "ACL4SSR_Online_Full_Google 全分组 谷歌版 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Google.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Google.ini"
       },
       {
         label: "ACL4SSR_Online_Full_MultiMode 全分组 多模式版 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"
       },
       {
         label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
       },
       {
         label: "ACL4SSR_Online_Full_AdblockPlus 全分组 重度用户使用 更多去广告 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
       },
       {
         label: "ACL4SSR_Online_Full_Netflix 全分组 重度用户使用 奈飞全量 (与Github同步)",
-        value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
+        value: "https://raw.githubusercontent.com/wuzf/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
       }
     ]
   );
@@ -2720,8 +2720,8 @@ function Dr(e, r) {
                 </main>
 
                 ${Sr()}
-                ${Or()}
                 ${Lr()}
+                ${Or()}
                 ${Er()}
                 ${yr()}
                 ${_r()}
@@ -2984,11 +2984,11 @@ function Vr(e, r) {
     t += e;
   return t;
 }
-function qr(e) {
+function zr(e) {
   return e === 0 && Number.NEGATIVE_INFINITY === 1 / e;
 }
-var zr = Mt, Yr = Hr, Wr = jr, Gr = Vr, Kr = qr, Jr = Br, E = {
-  isNothing: zr,
+var qr = Mt, Yr = Hr, Wr = jr, Gr = Vr, Kr = zr, Jr = Br, E = {
+  isNothing: qr,
   isObject: Yr,
   toArray: Wr,
   repeat: Gr,
@@ -3331,7 +3331,7 @@ function Ai(e) {
   return r = e.replace(/_/g, "").toLowerCase(), t = r[0] === "-" ? -1 : 1, "+-".indexOf(r[0]) >= 0 && (r = r.slice(1)), r === ".inf" ? t === 1 ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY : r === ".nan" ? NaN : t * parseFloat(r, 10);
 }
 var Ei = /^[-+]?[0-9]+e/;
-function Li(e, r) {
+function Oi(e, r) {
   var t;
   if (isNaN(e))
     switch (r) {
@@ -3364,15 +3364,15 @@ function Li(e, r) {
     return "-0.0";
   return t = e.toString(10), Ei.test(t) ? t.replace("e", ".e") : t;
 }
-function Oi(e) {
+function Li(e) {
   return Object.prototype.toString.call(e) === "[object Number]" && (e % 1 !== 0 || E.isNegativeZero(e));
 }
 var Ri = new R("tag:yaml.org,2002:float", {
   kind: "scalar",
   resolve: ki,
   construct: Ai,
-  predicate: Oi,
-  represent: Li,
+  predicate: Li,
+  represent: Oi,
   defaultStyle: "lowercase"
 }), Ti = li.extend({
   implicit: [
@@ -3450,14 +3450,14 @@ var Vi = new R("tag:yaml.org,2002:binary", {
   construct: Hi,
   predicate: Bi,
   represent: ji
-}), qi = Object.prototype.hasOwnProperty, zi = Object.prototype.toString;
+}), zi = Object.prototype.hasOwnProperty, qi = Object.prototype.toString;
 function Yi(e) {
   if (e === null) return !0;
   var r = [], t, n, i, o, s, a = e;
   for (t = 0, n = a.length; t < n; t += 1) {
-    if (i = a[t], s = !1, zi.call(i) !== "[object Object]") return !1;
+    if (i = a[t], s = !1, qi.call(i) !== "[object Object]") return !1;
     for (o in i)
-      if (qi.call(i, o))
+      if (zi.call(i, o))
         if (!s) s = !0;
         else return !1;
     if (!s) return !1;
@@ -3521,7 +3521,7 @@ var rn = new R("tag:yaml.org,2002:set", {
     Xi,
     rn
   ]
-}), J = Object.prototype.hasOwnProperty, Ve = 1, Bt = 2, Vt = 3, qe = 4, rt = 1, nn = 2, bt = 3, on = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x84\x86-\x9F\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/, sn = /[\x85\u2028\u2029]/, an = /[,\[\]\{\}]/, qt = /^(?:!|!!|![a-z\-]+!)$/i, zt = /^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\-#;\/\?:@&=\+\$,_\.!~\*'\(\)\[\]])*$/i;
+}), J = Object.prototype.hasOwnProperty, Ve = 1, Bt = 2, Vt = 3, ze = 4, rt = 1, nn = 2, bt = 3, on = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x84\x86-\x9F\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/, sn = /[\x85\u2028\u2029]/, an = /[,\[\]\{\}]/, zt = /^(?:!|!!|![a-z\-]+!)$/i, qt = /^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\-#;\/\?:@&=\+\$,_\.!~\*'\(\)\[\]])*$/i;
 function gt(e) {
   return Object.prototype.toString.call(e);
 }
@@ -3577,17 +3577,17 @@ function Gt(e, r) {
 function b(e, r) {
   throw Gt(e, r);
 }
-function ze(e, r) {
+function qe(e, r) {
   e.onWarning && e.onWarning.call(null, Gt(e, r));
 }
 var wt = {
   YAML: function(r, t, n) {
     var i, o, s;
-    r.version !== null && b(r, "duplication of %YAML directive"), n.length !== 1 && b(r, "YAML directive accepts exactly one argument"), i = /^([0-9]+)\.([0-9]+)$/.exec(n[0]), i === null && b(r, "ill-formed argument of the YAML directive"), o = parseInt(i[1], 10), s = parseInt(i[2], 10), o !== 1 && b(r, "unacceptable YAML version of the document"), r.version = n[0], r.checkLineBreaks = s < 2, s !== 1 && s !== 2 && ze(r, "unsupported YAML version of the document");
+    r.version !== null && b(r, "duplication of %YAML directive"), n.length !== 1 && b(r, "YAML directive accepts exactly one argument"), i = /^([0-9]+)\.([0-9]+)$/.exec(n[0]), i === null && b(r, "ill-formed argument of the YAML directive"), o = parseInt(i[1], 10), s = parseInt(i[2], 10), o !== 1 && b(r, "unacceptable YAML version of the document"), r.version = n[0], r.checkLineBreaks = s < 2, s !== 1 && s !== 2 && qe(r, "unsupported YAML version of the document");
   },
   TAG: function(r, t, n) {
     var i, o;
-    n.length !== 2 && b(r, "TAG directive accepts exactly two arguments"), i = n[0], o = n[1], qt.test(i) || b(r, "ill-formed tag handle (first argument) of the TAG directive"), J.call(r.tagMap, i) && b(r, 'there is a previously declared suffix for "' + i + '" tag handle'), zt.test(o) || b(r, "ill-formed tag prefix (second argument) of the TAG directive");
+    n.length !== 2 && b(r, "TAG directive accepts exactly two arguments"), i = n[0], o = n[1], zt.test(i) || b(r, "ill-formed tag handle (first argument) of the TAG directive"), J.call(r.tagMap, i) && b(r, 'there is a previously declared suffix for "' + i + '" tag handle'), qt.test(o) || b(r, "ill-formed tag prefix (second argument) of the TAG directive");
     try {
       o = decodeURIComponent(o);
     } catch {
@@ -3649,7 +3649,7 @@ function A(e, r, t) {
     else
       break;
   }
-  return t !== -1 && n !== 0 && e.lineIndent < t && ze(e, "deficient indentation"), n;
+  return t !== -1 && n !== 0 && e.lineIndent < t && qe(e, "deficient indentation"), n;
 }
 function Qe(e) {
   var r = e.position, t;
@@ -3822,7 +3822,7 @@ function vn(e, r, t) {
       else
         return e.tag = c, e.anchor = d, !0;
     }
-    if ((e.line === o || e.lineIndent > r) && (w && (s = e.line, a = e.lineStart, l = e.position), _e(e, r, qe, !0, i) && (w ? m = e.result : g = e.result), w || (fe(e, p, h, f, m, g, s, a, l), f = m = g = null), A(e, !0, -1), y = e.input.charCodeAt(e.position)), (e.line === o || e.lineIndent > r) && y !== 0)
+    if ((e.line === o || e.lineIndent > r) && (w && (s = e.line, a = e.lineStart, l = e.position), _e(e, r, ze, !0, i) && (w ? m = e.result : g = e.result), w || (fe(e, p, h, f, m, g, s, a, l), f = m = g = null), A(e, !0, -1), y = e.input.charCodeAt(e.position)), (e.line === o || e.lineIndent > r) && y !== 0)
       b(e, "bad indentation of a mapping entry");
     else if (e.lineIndent < r)
       break;
@@ -3839,10 +3839,10 @@ function wn(e) {
     e.position < e.length ? (o = e.input.slice(r, e.position), s = e.input.charCodeAt(++e.position)) : b(e, "unexpected end of the stream within a verbatim tag");
   } else {
     for (; s !== 0 && !P(s); )
-      s === 33 && (n ? b(e, "tag suffix cannot contain exclamation marks") : (i = e.input.slice(r - 1, e.position + 1), qt.test(i) || b(e, "named tag handle cannot contain such characters"), n = !0, r = e.position + 1)), s = e.input.charCodeAt(++e.position);
+      s === 33 && (n ? b(e, "tag suffix cannot contain exclamation marks") : (i = e.input.slice(r - 1, e.position + 1), zt.test(i) || b(e, "named tag handle cannot contain such characters"), n = !0, r = e.position + 1)), s = e.input.charCodeAt(++e.position);
     o = e.input.slice(r, e.position), an.test(o) && b(e, "tag suffix cannot contain flow indicator characters");
   }
-  o && !zt.test(o) && b(e, "tag name cannot contain such characters: " + o);
+  o && !qt.test(o) && b(e, "tag name cannot contain such characters: " + o);
   try {
     o = decodeURIComponent(o);
   } catch {
@@ -3866,10 +3866,10 @@ function yn(e) {
 }
 function _e(e, r, t, n, i) {
   var o, s, a, l = 1, c = !1, d = !1, p, h, f, m, g, w;
-  if (e.listener !== null && e.listener("open", e), e.tag = null, e.anchor = null, e.kind = null, e.result = null, o = s = a = qe === t || Vt === t, n && A(e, !0, -1) && (c = !0, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)), l === 1)
+  if (e.listener !== null && e.listener("open", e), e.tag = null, e.anchor = null, e.kind = null, e.result = null, o = s = a = ze === t || Vt === t, n && A(e, !0, -1) && (c = !0, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)), l === 1)
     for (; wn(e) || xn(e); )
       A(e, !0, -1) ? (c = !0, a = o, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)) : a = !1;
-  if (a && (a = c || i), (l === 1 || qe === t) && (Ve === t || Bt === t ? g = r : g = r + 1, w = e.position - e.lineStart, l === 1 ? a && (yt(e, w) || vn(e, w, g)) || bn(e, g) ? d = !0 : (s && gn(e, g) || fn(e, g) || mn(e, g) ? d = !0 : yn(e) ? (d = !0, (e.tag !== null || e.anchor !== null) && b(e, "alias node should not have any properties")) : hn(e, g, Ve === t) && (d = !0, e.tag === null && (e.tag = "?")), e.anchor !== null && (e.anchorMap[e.anchor] = e.result)) : l === 0 && (d = a && yt(e, w))), e.tag === null)
+  if (a && (a = c || i), (l === 1 || ze === t) && (Ve === t || Bt === t ? g = r : g = r + 1, w = e.position - e.lineStart, l === 1 ? a && (yt(e, w) || vn(e, w, g)) || bn(e, g) ? d = !0 : (s && gn(e, g) || fn(e, g) || mn(e, g) ? d = !0 : yn(e) ? (d = !0, (e.tag !== null || e.anchor !== null) && b(e, "alias node should not have any properties")) : hn(e, g, Ve === t) && (d = !0, e.tag === null && (e.tag = "?")), e.anchor !== null && (e.anchorMap[e.anchor] = e.result)) : l === 0 && (d = a && yt(e, w))), e.tag === null)
     e.anchor !== null && (e.anchorMap[e.anchor] = e.result);
   else if (e.tag === "?") {
     for (e.result !== null && e.kind !== "scalar" && b(e, 'unacceptable node kind for !<?> tag; it should be "scalar", not "' + e.kind + '"'), p = 0, h = e.implicitTypes.length; p < h; p += 1)
@@ -3909,9 +3909,9 @@ function Cn(e) {
         s = e.input.charCodeAt(++e.position);
       i.push(e.input.slice(t, e.position));
     }
-    s !== 0 && ct(e), J.call(wt, n) ? wt[n](e, n, i) : ze(e, 'unknown document directive "' + n + '"');
+    s !== 0 && ct(e), J.call(wt, n) ? wt[n](e, n, i) : qe(e, 'unknown document directive "' + n + '"');
   }
-  if (A(e, !0, -1), e.lineIndent === 0 && e.input.charCodeAt(e.position) === 45 && e.input.charCodeAt(e.position + 1) === 45 && e.input.charCodeAt(e.position + 2) === 45 ? (e.position += 3, A(e, !0, -1)) : o && b(e, "directives end mark is expected"), _e(e, e.lineIndent - 1, qe, !1, !0), A(e, !0, -1), e.checkLineBreaks && sn.test(e.input.slice(r, e.position)) && ze(e, "non-ASCII line breaks are interpreted as content"), e.documents.push(e.result), e.position === e.lineStart && Qe(e)) {
+  if (A(e, !0, -1), e.lineIndent === 0 && e.input.charCodeAt(e.position) === 45 && e.input.charCodeAt(e.position + 1) === 45 && e.input.charCodeAt(e.position + 2) === 45 ? (e.position += 3, A(e, !0, -1)) : o && b(e, "directives end mark is expected"), _e(e, e.lineIndent - 1, ze, !1, !0), A(e, !0, -1), e.checkLineBreaks && sn.test(e.input.slice(r, e.position)) && qe(e, "non-ASCII line breaks are interpreted as content"), e.documents.push(e.result), e.position === e.lineStart && Qe(e)) {
     e.input.charCodeAt(e.position) === 46 && (e.position += 3, A(e, !0, -1));
     return;
   }
@@ -3940,7 +3940,7 @@ function Sn(e, r) {
 }
 var kn = Sn, An = {
   load: kn
-}, Kt = Object.prototype.toString, Jt = Object.prototype.hasOwnProperty, pt = 65279, En = 9, Ee = 10, Ln = 13, On = 32, Rn = 33, Tn = 34, nt = 35, In = 37, Nn = 38, Pn = 39, Fn = 42, Qt = 44, Un = 45, Ye = 58, Mn = 61, $n = 62, Dn = 63, Hn = 64, Xt = 91, Zt = 93, jn = 96, er = 123, Bn = 124, tr = 125, T = {};
+}, Kt = Object.prototype.toString, Jt = Object.prototype.hasOwnProperty, pt = 65279, En = 9, Ee = 10, On = 13, Ln = 32, Rn = 33, Tn = 34, nt = 35, In = 37, Nn = 38, Pn = 39, Fn = 42, Qt = 44, Un = 45, Ye = 58, Mn = 61, $n = 62, Dn = 63, Hn = 64, Xt = 91, Zt = 93, jn = 96, er = 123, Bn = 124, tr = 125, T = {};
 T[0] = "\\0";
 T[7] = "\\a";
 T[8] = "\\b";
@@ -3973,8 +3973,8 @@ var Vn = [
   "off",
   "Off",
   "OFF"
-], qn = /^[-+]?[0-9_]+(?::[0-9_]+)+(?:\.[0-9_]*)?$/;
-function zn(e, r) {
+], zn = /^[-+]?[0-9_]+(?::[0-9_]+)+(?:\.[0-9_]*)?$/;
+function qn(e, r) {
   var t, n, i, o, s, a, l;
   if (r === null) return {};
   for (t = {}, n = Object.keys(r), i = 0, o = n.length; i < o; i += 1)
@@ -3993,9 +3993,9 @@ function Yn(e) {
     throw new N("code point within a string may not be greater than 0xFFFFFFFF");
   return "\\" + t + E.repeat("0", n - r.length) + r;
 }
-var Wn = 1, Le = 2;
+var Wn = 1, Oe = 2;
 function Gn(e) {
-  this.schema = e.schema || jt, this.indent = Math.max(1, e.indent || 2), this.noArrayIndent = e.noArrayIndent || !1, this.skipInvalid = e.skipInvalid || !1, this.flowLevel = E.isNothing(e.flowLevel) ? -1 : e.flowLevel, this.styleMap = zn(this.schema, e.styles || null), this.sortKeys = e.sortKeys || !1, this.lineWidth = e.lineWidth || 80, this.noRefs = e.noRefs || !1, this.noCompatMode = e.noCompatMode || !1, this.condenseFlow = e.condenseFlow || !1, this.quotingType = e.quotingType === '"' ? Le : Wn, this.forceQuotes = e.forceQuotes || !1, this.replacer = typeof e.replacer == "function" ? e.replacer : null, this.implicitTypes = this.schema.compiledImplicit, this.explicitTypes = this.schema.compiledExplicit, this.tag = null, this.result = "", this.duplicates = [], this.usedDuplicates = null;
+  this.schema = e.schema || jt, this.indent = Math.max(1, e.indent || 2), this.noArrayIndent = e.noArrayIndent || !1, this.skipInvalid = e.skipInvalid || !1, this.flowLevel = E.isNothing(e.flowLevel) ? -1 : e.flowLevel, this.styleMap = qn(this.schema, e.styles || null), this.sortKeys = e.sortKeys || !1, this.lineWidth = e.lineWidth || 80, this.noRefs = e.noRefs || !1, this.noCompatMode = e.noCompatMode || !1, this.condenseFlow = e.condenseFlow || !1, this.quotingType = e.quotingType === '"' ? Oe : Wn, this.forceQuotes = e.forceQuotes || !1, this.replacer = typeof e.replacer == "function" ? e.replacer : null, this.implicitTypes = this.schema.compiledImplicit, this.explicitTypes = this.schema.compiledExplicit, this.tag = null, this.result = "", this.duplicates = [], this.usedDuplicates = null;
 }
 function Ct(e, r) {
   for (var t = E.repeat(" ", r), n = 0, i = -1, o = "", s, a = e.length; n < a; )
@@ -4016,13 +4016,13 @@ function Kn(e, r) {
   return !1;
 }
 function We(e) {
-  return e === On || e === En;
+  return e === Ln || e === En;
 }
-function Oe(e) {
+function Le(e) {
   return 32 <= e && e <= 126 || 161 <= e && e <= 55295 && e !== 8232 && e !== 8233 || 57344 <= e && e <= 65533 && e !== pt || 65536 <= e && e <= 1114111;
 }
 function _t(e) {
-  return Oe(e) && e !== pt && e !== Ln && e !== Ee;
+  return Le(e) && e !== pt && e !== On && e !== Ee;
 }
 function St(e, r, t) {
   var n = _t(e), i = n && !We(e);
@@ -4035,7 +4035,7 @@ function St(e, r, t) {
   );
 }
 function Jn(e) {
-  return Oe(e) && e !== pt && !We(e) && e !== Un && e !== Dn && e !== Ye && e !== Qt && e !== Xt && e !== Zt && e !== er && e !== tr && e !== nt && e !== Nn && e !== Fn && e !== Rn && e !== Bn && e !== Mn && e !== $n && e !== Pn && e !== Tn && e !== In && e !== Hn && e !== jn;
+  return Le(e) && e !== pt && !We(e) && e !== Un && e !== Dn && e !== Ye && e !== Qt && e !== Xt && e !== Zt && e !== er && e !== tr && e !== nt && e !== Nn && e !== Fn && e !== Rn && e !== Bn && e !== Mn && e !== $n && e !== Pn && e !== Tn && e !== In && e !== Hn && e !== jn;
 }
 function Qn(e) {
   return !We(e) && e !== Ye;
@@ -4053,7 +4053,7 @@ function Xn(e, r, t, n, i, o, s, a) {
   var l, c = 0, d = null, p = !1, h = !1, f = n !== -1, m = -1, g = Jn(ke(e, 0)) && Qn(ke(e, e.length - 1));
   if (r || s)
     for (l = 0; l < e.length; c >= 65536 ? l += 2 : l++) {
-      if (c = ke(e, l), !Oe(c))
+      if (c = ke(e, l), !Le(c))
         return de;
       g = g && St(c, d, a), d = c;
     }
@@ -4062,20 +4062,20 @@ function Xn(e, r, t, n, i, o, s, a) {
       if (c = ke(e, l), c === Ee)
         p = !0, f && (h = h || // Foldable line = too long, and not more-indented.
         l - m - 1 > n && e[m + 1] !== " ", m = l);
-      else if (!Oe(c))
+      else if (!Le(c))
         return de;
       g = g && St(c, d, a), d = c;
     }
     h = h || f && l - m - 1 > n && e[m + 1] !== " ";
   }
-  return !p && !h ? g && !s && !i(e) ? ir : o === Le ? de : st : t > 9 && rr(e) ? de : s ? o === Le ? de : st : h ? or : nr;
+  return !p && !h ? g && !s && !i(e) ? ir : o === Oe ? de : st : t > 9 && rr(e) ? de : s ? o === Oe ? de : st : h ? or : nr;
 }
 function Zn(e, r, t, n, i) {
   e.dump = (function() {
     if (r.length === 0)
-      return e.quotingType === Le ? '""' : "''";
-    if (!e.noCompatMode && (Vn.indexOf(r) !== -1 || qn.test(r)))
-      return e.quotingType === Le ? '"' + r + '"' : "'" + r + "'";
+      return e.quotingType === Oe ? '""' : "''";
+    if (!e.noCompatMode && (Vn.indexOf(r) !== -1 || zn.test(r)))
+      return e.quotingType === Oe ? '"' + r + '"' : "'" + r + "'";
     var o = e.indent * Math.max(1, t), s = e.lineWidth === -1 ? -1 : Math.max(Math.min(e.lineWidth, 40), e.lineWidth - o), a = n || e.flowLevel > -1 && t >= e.flowLevel;
     function l(c) {
       return Kn(e, c);
@@ -4141,25 +4141,25 @@ function Et(e, r) {
 }
 function to(e) {
   for (var r = "", t = 0, n, i = 0; i < e.length; t >= 65536 ? i += 2 : i++)
-    t = ke(e, i), n = T[t], !n && Oe(t) ? (r += e[i], t >= 65536 && (r += e[i + 1])) : r += n || Yn(t);
+    t = ke(e, i), n = T[t], !n && Le(t) ? (r += e[i], t >= 65536 && (r += e[i + 1])) : r += n || Yn(t);
   return r;
 }
 function ro(e, r, t) {
   var n = "", i = e.tag, o, s, a;
   for (o = 0, s = t.length; o < s; o += 1)
-    a = t[o], e.replacer && (a = e.replacer.call(t, String(o), a)), (q(e, r, a, !1, !1) || typeof a > "u" && q(e, r, null, !1, !1)) && (n !== "" && (n += "," + (e.condenseFlow ? "" : " ")), n += e.dump);
+    a = t[o], e.replacer && (a = e.replacer.call(t, String(o), a)), (z(e, r, a, !1, !1) || typeof a > "u" && z(e, r, null, !1, !1)) && (n !== "" && (n += "," + (e.condenseFlow ? "" : " ")), n += e.dump);
   e.tag = i, e.dump = "[" + n + "]";
 }
-function Lt(e, r, t, n) {
+function Ot(e, r, t, n) {
   var i = "", o = e.tag, s, a, l;
   for (s = 0, a = t.length; s < a; s += 1)
-    l = t[s], e.replacer && (l = e.replacer.call(t, String(s), l)), (q(e, r + 1, l, !0, !0, !1, !0) || typeof l > "u" && q(e, r + 1, null, !0, !0, !1, !0)) && ((!n || i !== "") && (i += ot(e, r)), e.dump && Ee === e.dump.charCodeAt(0) ? i += "-" : i += "- ", i += e.dump);
+    l = t[s], e.replacer && (l = e.replacer.call(t, String(s), l)), (z(e, r + 1, l, !0, !0, !1, !0) || typeof l > "u" && z(e, r + 1, null, !0, !0, !1, !0)) && ((!n || i !== "") && (i += ot(e, r)), e.dump && Ee === e.dump.charCodeAt(0) ? i += "-" : i += "- ", i += e.dump);
   e.tag = o, e.dump = i || "[]";
 }
 function io(e, r, t) {
   var n = "", i = e.tag, o = Object.keys(t), s, a, l, c, d;
   for (s = 0, a = o.length; s < a; s += 1)
-    d = "", n !== "" && (d += ", "), e.condenseFlow && (d += '"'), l = o[s], c = t[l], e.replacer && (c = e.replacer.call(t, l, c)), q(e, r, l, !1, !1) && (e.dump.length > 1024 && (d += "? "), d += e.dump + (e.condenseFlow ? '"' : "") + ":" + (e.condenseFlow ? "" : " "), q(e, r, c, !1, !1) && (d += e.dump, n += d));
+    d = "", n !== "" && (d += ", "), e.condenseFlow && (d += '"'), l = o[s], c = t[l], e.replacer && (c = e.replacer.call(t, l, c)), z(e, r, l, !1, !1) && (e.dump.length > 1024 && (d += "? "), d += e.dump + (e.condenseFlow ? '"' : "") + ":" + (e.condenseFlow ? "" : " "), z(e, r, c, !1, !1) && (d += e.dump, n += d));
   e.tag = i, e.dump = "{" + n + "}";
 }
 function no(e, r, t, n) {
@@ -4171,10 +4171,10 @@ function no(e, r, t, n) {
   else if (e.sortKeys)
     throw new N("sortKeys must be a boolean or a function");
   for (a = 0, l = s.length; a < l; a += 1)
-    h = "", (!n || i !== "") && (h += ot(e, r)), c = s[a], d = t[c], e.replacer && (d = e.replacer.call(t, c, d)), q(e, r + 1, c, !0, !0, !0) && (p = e.tag !== null && e.tag !== "?" || e.dump && e.dump.length > 1024, p && (e.dump && Ee === e.dump.charCodeAt(0) ? h += "?" : h += "? "), h += e.dump, p && (h += ot(e, r)), q(e, r + 1, d, !0, p) && (e.dump && Ee === e.dump.charCodeAt(0) ? h += ":" : h += ": ", h += e.dump, i += h));
+    h = "", (!n || i !== "") && (h += ot(e, r)), c = s[a], d = t[c], e.replacer && (d = e.replacer.call(t, c, d)), z(e, r + 1, c, !0, !0, !0) && (p = e.tag !== null && e.tag !== "?" || e.dump && e.dump.length > 1024, p && (e.dump && Ee === e.dump.charCodeAt(0) ? h += "?" : h += "? "), h += e.dump, p && (h += ot(e, r)), z(e, r + 1, d, !0, p) && (e.dump && Ee === e.dump.charCodeAt(0) ? h += ":" : h += ": ", h += e.dump, i += h));
   e.tag = o, e.dump = i || "{}";
 }
-function Ot(e, r, t) {
+function Lt(e, r, t) {
   var n, i, o, s, a, l;
   for (i = t ? e.explicitTypes : e.implicitTypes, o = 0, s = i.length; o < s; o += 1)
     if (a = i[o], (a.instanceOf || a.predicate) && (!a.instanceOf || typeof r == "object" && r instanceof a.instanceOf) && (!a.predicate || a.predicate(r))) {
@@ -4191,8 +4191,8 @@ function Ot(e, r, t) {
     }
   return !1;
 }
-function q(e, r, t, n, i, o, s) {
-  e.tag = null, e.dump = t, Ot(e, t, !1) || Ot(e, t, !0);
+function z(e, r, t, n, i, o, s) {
+  e.tag = null, e.dump = t, Lt(e, t, !1) || Lt(e, t, !0);
   var a = Kt.call(e.dump), l = n, c;
   n && (n = e.flowLevel < 0 || e.flowLevel > r);
   var d = a === "[object Object]" || a === "[object Array]", p, h;
@@ -4202,7 +4202,7 @@ function q(e, r, t, n, i, o, s) {
     if (d && h && !e.usedDuplicates[p] && (e.usedDuplicates[p] = !0), a === "[object Object]")
       n && Object.keys(e.dump).length !== 0 ? (no(e, r, e.dump, i), h && (e.dump = "&ref_" + p + e.dump)) : (io(e, r, e.dump), h && (e.dump = "&ref_" + p + " " + e.dump));
     else if (a === "[object Array]")
-      n && e.dump.length !== 0 ? (e.noArrayIndent && !s && r > 0 ? Lt(e, r - 1, e.dump, i) : Lt(e, r, e.dump, i), h && (e.dump = "&ref_" + p + e.dump)) : (ro(e, r, e.dump), h && (e.dump = "&ref_" + p + " " + e.dump));
+      n && e.dump.length !== 0 ? (e.noArrayIndent && !s && r > 0 ? Ot(e, r - 1, e.dump, i) : Ot(e, r, e.dump, i), h && (e.dump = "&ref_" + p + e.dump)) : (ro(e, r, e.dump), h && (e.dump = "&ref_" + p + " " + e.dump));
     else if (a === "[object String]")
       e.tag !== "?" && Zn(e, e.dump, r, o, l);
     else {
@@ -4240,7 +4240,7 @@ function so(e, r) {
   var t = new Gn(r);
   t.noRefs || oo(e, t);
   var n = e;
-  return t.replacer && (n = t.replacer.call({ "": n }, "", n)), q(t, 0, n, !0, !0) ? t.dump + `
+  return t.replacer && (n = t.replacer.call({ "": n }, "", n)), z(t, 0, n, !0, !0) ? t.dump + `
 ` : "";
 }
 var ao = so, lo = {
@@ -4533,7 +4533,7 @@ const F = class F {
 };
 Q = new WeakMap(), X = new WeakMap(), x(F, Q, "^LINK_TO^"), x(F, X, /* @__PURE__ */ new Map());
 let S = F;
-var Z, Ne, z, U, ee, me;
+var Z, Ne, q, U, ee, me;
 class ar extends Se {
   constructor(t) {
     super();
@@ -4542,7 +4542,7 @@ class ar extends Se {
     /** * @description 混淆链接 */
     x(this, Ne, "");
     /** * @description vps原始配置 */
-    x(this, z, {});
+    x(this, q, {});
     /** * @description 混淆配置 */
     x(this, U, {});
     /** * @description 原始备注 */
@@ -4556,14 +4556,14 @@ class ar extends Se {
    * @param {string} v
    */
   setOriginConfig(t) {
-    v(this, Z, t), v(this, z, new URL(t)), v(this, ee, u(this, z).hash ?? "");
+    v(this, Z, t), v(this, q, new URL(t)), v(this, ee, u(this, q).hash ?? "");
   }
   /**
    * @description 更新原始配置
    * @param {string} ps
    */
   updateOriginConfig(t) {
-    u(this, z).hash = t, v(this, ee, t), v(this, Z, u(this, z).href), this.setConfuseConfig(u(this, Z));
+    u(this, q).hash = t, v(this, ee, t), v(this, Z, u(this, q).href), this.setConfuseConfig(u(this, Z));
   }
   /**
    * @description 设置混淆配置
@@ -4598,7 +4598,7 @@ class ar extends Se {
    * @description 原始配置
    */
   get originConfig() {
-    return u(this, z);
+    return u(this, q);
   }
   /**
    * @description 混淆备注
@@ -4621,7 +4621,7 @@ class ar extends Se {
     return u(this, U);
   }
 }
-Z = new WeakMap(), Ne = new WeakMap(), z = new WeakMap(), U = new WeakMap(), ee = new WeakMap(), me = new WeakMap();
+Z = new WeakMap(), Ne = new WeakMap(), q = new WeakMap(), U = new WeakMap(), ee = new WeakMap(), me = new WeakMap();
 var te, Pe, B, I, re, be;
 class lr extends Se {
   constructor(t) {
@@ -4743,7 +4743,7 @@ class lr extends Se {
   }
 }
 te = new WeakMap(), Pe = new WeakMap(), B = new WeakMap(), I = new WeakMap(), re = new WeakMap(), be = new WeakMap();
-var ge, Fe, L, O, ie, ve;
+var ge, Fe, O, L, ie, ve;
 class cr extends Se {
   constructor(t) {
     super();
@@ -4752,9 +4752,9 @@ class cr extends Se {
     /** * @description 混淆链接 */
     x(this, Fe, "");
     /** * @description vps原始配置 */
-    x(this, L, {});
-    /** * @description 混淆配置 */
     x(this, O, {});
+    /** * @description 混淆配置 */
+    x(this, L, {});
     /** * @description 原始备注 */
     x(this, ie, "");
     /** * @description 混淆备注 */
@@ -4767,7 +4767,7 @@ class cr extends Se {
    */
   setOriginConfig(t) {
     const [n, i] = t.match(/ssr:\/\/(.*)/) || [];
-    v(this, ge, t), v(this, L, this.getOriginConfig(De(i))), v(this, ie, u(this, L).remarks ?? "");
+    v(this, ge, t), v(this, O, this.getOriginConfig(De(i))), v(this, ie, u(this, O).remarks ?? "");
   }
   // oxo.08050611.xyz:10000:origin:aes-256-cfb:plain:NlJWUHp2bVQ1MCthdTNXajBCL2hiTTJ6VVZ5bWxVQTJkbkx3aXZDMFR5TT0/?remarks=5rWL6K-Vc3Ny&protoparam=&obfsparam=
   getOriginConfig(t) {
@@ -4789,13 +4789,13 @@ class cr extends Se {
    * @param {string} ps
    */
   updateOriginConfig(t) {
-    u(this, L).remarks = t, v(this, ie, t), v(this, ge, `ssr://${D(`${u(this, L).server}:${u(this, L).port}:${u(this, L).protocol}:${u(this, L).method}:${u(this, L).obfs}:${u(this, L).password_base64}?remarks=${u(this, L).remarks}${u(this, L).params}`)}`), this.setConfuseConfig();
+    u(this, O).remarks = t, v(this, ie, t), v(this, ge, `ssr://${D(`${u(this, O).server}:${u(this, O).port}:${u(this, O).protocol}:${u(this, O).method}:${u(this, O).obfs}:${u(this, O).password_base64}?remarks=${u(this, O).remarks}${u(this, O).params}`)}`), this.setConfuseConfig();
   }
   /**
    * @description 设置混淆配置
    */
   setConfuseConfig() {
-    v(this, O, structuredClone(u(this, L))), u(this, O).server = this.getHostName(), u(this, O).port = this.getPort(), u(this, O).remarks = D(S.setPs(u(this, ie), u(this, ve))), v(this, Fe, `ssr://${D(`${u(this, O).server}:${u(this, O).port}:${u(this, O).protocol}:${u(this, O).method}:${u(this, O).obfs}:${u(this, O).password_base64}?remarks=${u(this, O).remarks}${u(this, O).params}`)}`);
+    v(this, L, structuredClone(u(this, O))), u(this, L).server = this.getHostName(), u(this, L).port = this.getPort(), u(this, L).remarks = D(S.setPs(u(this, ie), u(this, ve))), v(this, Fe, `ssr://${D(`${u(this, L).server}:${u(this, L).port}:${u(this, L).protocol}:${u(this, L).method}:${u(this, L).obfs}:${u(this, L).password_base64}?remarks=${u(this, L).remarks}${u(this, L).params}`)}`);
   }
   restoreClash(t, n) {
     var i;
@@ -4823,7 +4823,7 @@ class cr extends Se {
    * @description 原始配置
    */
   get originConfig() {
-    return u(this, L);
+    return u(this, O);
   }
   /**
    * @description 混淆备注
@@ -4843,10 +4843,10 @@ class cr extends Se {
    * @description 混淆配置
    */
   get confuseConfig() {
-    return u(this, O);
+    return u(this, L);
   }
 }
-ge = new WeakMap(), Fe = new WeakMap(), L = new WeakMap(), O = new WeakMap(), ie = new WeakMap(), ve = new WeakMap();
+ge = new WeakMap(), Fe = new WeakMap(), O = new WeakMap(), L = new WeakMap(), ie = new WeakMap(), ve = new WeakMap();
 var ne, Ue, Y, M, oe, we;
 class ur extends Se {
   constructor(t) {
@@ -5534,7 +5534,7 @@ let Ao = class {
       throw new Error(`Failed to merge singbox config: ${i.message || i}`);
     }
   }
-}, Lo = class extends mr {
+}, Oo = class extends mr {
   async getConfig(r, t) {
     try {
       return await this.parse(t), mo(this.originVps.join(`
@@ -5544,7 +5544,7 @@ let Ao = class {
     }
   }
 };
-class Oo {
+class Lo {
   constructor(r) {
     k(this, "urls", []);
     k(this, "vps", []);
@@ -5553,7 +5553,7 @@ class Oo {
     k(this, "parser", null);
     k(this, "clashClient", new Ao());
     k(this, "singboxClient", new Eo());
-    k(this, "v2rayClient", new Lo(this.vps));
+    k(this, "v2rayClient", new Oo(this.vps));
     this.chunkCount = Number(r.CHUNK_COUNT ?? He.CHUNK_COUNT), this.backend = r.BACKEND ?? He.BACKEND, this.parser = null;
   }
   async setSubUrls(r) {
@@ -5704,7 +5704,7 @@ class Po {
   }
   async toSub(r, t, n) {
     try {
-      const i = new Oo(t);
+      const i = new Lo(t);
       await i.setSubUrls(r);
       const o = new No(i);
       if (["clash", "clashr"].includes(n)) {
