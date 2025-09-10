@@ -3,8 +3,8 @@ var ht = (e) => {
   throw TypeError(e);
 };
 var gr = (e, r, t) => r in e ? br(e, r, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[r] = t;
-var k = (e, r, t) => gr(e, typeof r != "symbol" ? r + "" : r, t), Xe = (e, r, t) => r.has(e) || ht("Cannot " + t);
-var u = (e, r, t) => (Xe(e, r, "read from private field"), t ? t.call(e) : r.get(e)), x = (e, r, t) => r.has(e) ? ht("Cannot add the same private member more than once") : r instanceof WeakSet ? r.add(e) : r.set(e, t), v = (e, r, t, n) => (Xe(e, r, "write to private field"), n ? n.call(e, t) : r.set(e, t), t), Ze = (e, r, t) => (Xe(e, r, "access private method"), t);
+var k = (e, r, t) => gr(e, typeof r != "symbol" ? r + "" : r, t), Qe = (e, r, t) => r.has(e) || ht("Cannot " + t);
+var u = (e, r, t) => (Qe(e, r, "read from private field"), t ? t.call(e) : r.get(e)), x = (e, r, t) => r.has(e) ? ht("Cannot add the same private member more than once") : r instanceof WeakSet ? r.add(e) : r.set(e, t), v = (e, r, t, n) => (Qe(e, r, "write to private field"), n ? n.call(e, t) : r.set(e, t), t), Ze = (e, r, t) => (Qe(e, r, "access private method"), t);
 function Ft() {
   return [
     { label: "Clash", value: "clash" },
@@ -1127,8 +1127,8 @@ function Ut() {
                 </svg>`
   };
 }
-const Ar = Ut();
-function Er() {
+const Er = Ut();
+function Ar() {
   return `
     <script>
         class SubMultiSelect extends HTMLElement {
@@ -1340,7 +1340,7 @@ function Er() {
                 // 创建箭头图标
                 const arrow = document.createElement('span');
                 arrow.className = 'sub-multi-select__arrow';
-                arrow.innerHTML = \`${Ar.arrow}\`;
+                arrow.innerHTML = \`${Er.arrow}\`;
 
                 // 创建下拉框
                 const dropdown = document.createElement('div');
@@ -2722,7 +2722,7 @@ function Dr(e, r) {
                 ${Sr()}
                 ${Lr()}
                 ${Or()}
-                ${Er()}
+                ${Ar()}
                 ${yr()}
                 ${_r()}
                 ${Cr()}
@@ -2987,7 +2987,7 @@ function Vr(e, r) {
 function zr(e) {
   return e === 0 && Number.NEGATIVE_INFINITY === 1 / e;
 }
-var qr = Mt, Yr = Hr, Wr = jr, Gr = Vr, Kr = zr, Jr = Br, E = {
+var qr = Mt, Yr = Hr, Wr = jr, Gr = Vr, Kr = zr, Jr = Br, A = {
   isNothing: qr,
   isObject: Yr,
   toArray: Wr,
@@ -3001,15 +3001,15 @@ function $t(e, r) {
 
 ` + e.mark.snippet), n + " " + t) : n;
 }
-function Ae(e, r) {
+function Ee(e, r) {
   Error.call(this), this.name = "YAMLException", this.reason = e, this.mark = r, this.message = $t(this, !1), Error.captureStackTrace ? Error.captureStackTrace(this, this.constructor) : this.stack = new Error().stack || "";
 }
-Ae.prototype = Object.create(Error.prototype);
-Ae.prototype.constructor = Ae;
-Ae.prototype.toString = function(r) {
+Ee.prototype = Object.create(Error.prototype);
+Ee.prototype.constructor = Ee;
+Ee.prototype.toString = function(r) {
   return this.name + ": " + $t(this, r);
 };
-var N = Ae;
+var N = Ee;
 function et(e, r, t, n, i) {
   var o = "", s = "", a = Math.floor(i / 2) - 1;
   return n - r > a && (o = " ... ", r = n - a + o.length), t - n > a && (s = " ...", t = n + a - s.length), {
@@ -3019,9 +3019,9 @@ function et(e, r, t, n, i) {
   };
 }
 function tt(e, r) {
-  return E.repeat(" ", r - e.length) + e;
+  return A.repeat(" ", r - e.length) + e;
 }
-function Qr(e, r) {
+function Xr(e, r) {
   if (r = Object.create(r || null), !e.buffer) return null;
   r.maxLength || (r.maxLength = 79), typeof r.indent != "number" && (r.indent = 1), typeof r.linesBefore != "number" && (r.linesBefore = 3), typeof r.linesAfter != "number" && (r.linesAfter = 2);
   for (var t = /\r?\n|\r|\0/g, n = [0], i = [], o, s = -1; o = t.exec(e.buffer); )
@@ -3035,10 +3035,10 @@ function Qr(e, r) {
       i[s - l],
       e.position - (n[s] - n[s - l]),
       p
-    ), a = E.repeat(" ", r.indent) + tt((e.line - l + 1).toString(), d) + " | " + c.str + `
+    ), a = A.repeat(" ", r.indent) + tt((e.line - l + 1).toString(), d) + " | " + c.str + `
 ` + a;
-  for (c = et(e.buffer, n[s], i[s], e.position, p), a += E.repeat(" ", r.indent) + tt((e.line + 1).toString(), d) + " | " + c.str + `
-`, a += E.repeat("-", r.indent + d + 3 + c.pos) + `^
+  for (c = et(e.buffer, n[s], i[s], e.position, p), a += A.repeat(" ", r.indent) + tt((e.line + 1).toString(), d) + " | " + c.str + `
+`, a += A.repeat("-", r.indent + d + 3 + c.pos) + `^
 `, l = 1; l <= r.linesAfter && !(s + l >= i.length); l++)
     c = et(
       e.buffer,
@@ -3046,11 +3046,11 @@ function Qr(e, r) {
       i[s + l],
       e.position - (n[s] - n[s + l]),
       p
-    ), a += E.repeat(" ", r.indent) + tt((e.line + l + 1).toString(), d) + " | " + c.str + `
+    ), a += A.repeat(" ", r.indent) + tt((e.line + l + 1).toString(), d) + " | " + c.str + `
 `;
   return a.replace(/\n$/, "");
 }
-var Xr = Qr, Zr = [
+var Qr = Xr, Zr = [
   "kind",
   "multi",
   "resolve",
@@ -3288,7 +3288,7 @@ function yi(e) {
   return t * parseInt(r, 10);
 }
 function Ci(e) {
-  return Object.prototype.toString.call(e) === "[object Number]" && e % 1 === 0 && !E.isNegativeZero(e);
+  return Object.prototype.toString.call(e) === "[object Number]" && e % 1 === 0 && !A.isNegativeZero(e);
 }
 var _i = new R("tag:yaml.org,2002:int", {
   kind: "scalar",
@@ -3326,11 +3326,11 @@ function ki(e) {
   // Probably should update regexp & check speed
   e[e.length - 1] === "_");
 }
-function Ai(e) {
+function Ei(e) {
   var r, t;
   return r = e.replace(/_/g, "").toLowerCase(), t = r[0] === "-" ? -1 : 1, "+-".indexOf(r[0]) >= 0 && (r = r.slice(1)), r === ".inf" ? t === 1 ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY : r === ".nan" ? NaN : t * parseFloat(r, 10);
 }
-var Ei = /^[-+]?[0-9]+e/;
+var Ai = /^[-+]?[0-9]+e/;
 function Oi(e, r) {
   var t;
   if (isNaN(e))
@@ -3360,17 +3360,17 @@ function Oi(e, r) {
       case "camelcase":
         return "-.Inf";
     }
-  else if (E.isNegativeZero(e))
+  else if (A.isNegativeZero(e))
     return "-0.0";
-  return t = e.toString(10), Ei.test(t) ? t.replace("e", ".e") : t;
+  return t = e.toString(10), Ai.test(t) ? t.replace("e", ".e") : t;
 }
 function Li(e) {
-  return Object.prototype.toString.call(e) === "[object Number]" && (e % 1 !== 0 || E.isNegativeZero(e));
+  return Object.prototype.toString.call(e) === "[object Number]" && (e % 1 !== 0 || A.isNegativeZero(e));
 }
 var Ri = new R("tag:yaml.org,2002:float", {
   kind: "scalar",
   resolve: ki,
-  construct: Ai,
+  construct: Ei,
   predicate: Li,
   represent: Oi,
   defaultStyle: "lowercase"
@@ -3483,17 +3483,17 @@ function Ji(e) {
   }
   return !0;
 }
-function Qi(e) {
+function Xi(e) {
   if (e === null) return [];
   var r, t, n, i, o, s = e;
   for (o = new Array(s.length), r = 0, t = s.length; r < t; r += 1)
     n = s[r], i = Object.keys(n), o[r] = [i[0], n[i[0]]];
   return o;
 }
-var Xi = new R("tag:yaml.org,2002:pairs", {
+var Qi = new R("tag:yaml.org,2002:pairs", {
   kind: "sequence",
   resolve: Ji,
-  construct: Qi
+  construct: Xi
 }), Zi = Object.prototype.hasOwnProperty;
 function en(e) {
   if (e === null) return !0;
@@ -3518,7 +3518,7 @@ var rn = new R("tag:yaml.org,2002:set", {
   explicit: [
     Vi,
     Gi,
-    Xi,
+    Qi,
     rn
   ]
 }), J = Object.prototype.hasOwnProperty, Ve = 1, Bt = 2, Vt = 3, ze = 4, rt = 1, nn = 2, bt = 3, on = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x84\x86-\x9F\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/, sn = /[\x85\u2028\u2029]/, an = /[,\[\]\{\}]/, zt = /^(?:!|!!|![a-z\-]+!)$/i, qt = /^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\-#;\/\?:@&=\+\$,_\.!~\*'\(\)\[\]])*$/i;
@@ -3572,7 +3572,7 @@ function Gt(e, r) {
     line: e.line,
     column: e.position - e.lineStart
   };
-  return t.snippet = Xr(t), new N(r, t);
+  return t.snippet = Qr(t), new N(r, t);
 }
 function b(e, r) {
   throw Gt(e, r);
@@ -3608,7 +3608,7 @@ function K(e, r, t, n) {
 }
 function xt(e, r, t, n) {
   var i, o, s, a;
-  for (E.isObject(t) || b(e, "cannot merge mappings; the provided source object is unacceptable"), i = Object.keys(t), s = 0, a = i.length; s < a; s += 1)
+  for (A.isObject(t) || b(e, "cannot merge mappings; the provided source object is unacceptable"), i = Object.keys(t), s = 0, a = i.length; s < a; s += 1)
     o = i[s], J.call(r, o) || (r[o] = t[o], n[o] = !0);
 }
 function fe(e, r, t, n, i, o, s, a, l) {
@@ -3635,7 +3635,7 @@ function ct(e) {
   var r;
   r = e.input.charCodeAt(e.position), r === 10 ? e.position++ : r === 13 ? (e.position++, e.input.charCodeAt(e.position) === 10 && e.position++) : b(e, "a line break is expected"), e.line += 1, e.lineStart = e.position, e.firstTabInLine = -1;
 }
-function A(e, r, t) {
+function E(e, r, t) {
   for (var n = 0, i = e.input.charCodeAt(e.position); i !== 0; ) {
     for (; ce(i); )
       i === 9 && e.firstTabInLine === -1 && (e.firstTabInLine = e.position), i = e.input.charCodeAt(++e.position);
@@ -3651,12 +3651,12 @@ function A(e, r, t) {
   }
   return t !== -1 && n !== 0 && e.lineIndent < t && qe(e, "deficient indentation"), n;
 }
-function Qe(e) {
+function Xe(e) {
   var r = e.position, t;
   return t = e.input.charCodeAt(r), !!((t === 45 || t === 46) && t === e.input.charCodeAt(r + 1) && t === e.input.charCodeAt(r + 2) && (r += 3, t = e.input.charCodeAt(r), t === 0 || P(t)));
 }
 function ut(e, r) {
-  r === 1 ? e.result += " " : r > 1 && (e.result += E.repeat(`
+  r === 1 ? e.result += " " : r > 1 && (e.result += A.repeat(`
 `, r - 1));
 }
 function hn(e, r, t) {
@@ -3671,10 +3671,10 @@ function hn(e, r, t) {
       if (n = e.input.charCodeAt(e.position - 1), P(n))
         break;
     } else {
-      if (e.position === e.lineStart && Qe(e) || t && he(f))
+      if (e.position === e.lineStart && Xe(e) || t && he(f))
         break;
       if (j(f))
-        if (l = e.line, c = e.lineStart, d = e.lineIndent, A(e, !1, -1), e.lineIndent >= r) {
+        if (l = e.line, c = e.lineStart, d = e.lineIndent, E(e, !1, -1), e.lineIndent >= r) {
           a = !0, f = e.input.charCodeAt(e.position);
           continue;
         } else {
@@ -3696,7 +3696,7 @@ function fn(e, r) {
         n = e.position, e.position++, i = e.position;
       else
         return !0;
-    else j(t) ? (K(e, n, i, !0), ut(e, A(e, !1, r)), n = i = e.position) : e.position === e.lineStart && Qe(e) ? b(e, "unexpected end of the document within a single quoted scalar") : (e.position++, i = e.position);
+    else j(t) ? (K(e, n, i, !0), ut(e, E(e, !1, r)), n = i = e.position) : e.position === e.lineStart && Xe(e) ? b(e, "unexpected end of the document within a single quoted scalar") : (e.position++, i = e.position);
   b(e, "unexpected end of the stream within a single quoted scalar");
 }
 function mn(e, r) {
@@ -3708,7 +3708,7 @@ function mn(e, r) {
       return K(e, t, e.position, !0), e.position++, !0;
     if (a === 92) {
       if (K(e, t, e.position, !0), a = e.input.charCodeAt(++e.position), j(a))
-        A(e, !1, r);
+        E(e, !1, r);
       else if (a < 256 && Yt[a])
         e.result += Wt[a], e.position++;
       else if ((s = cn(a)) > 0) {
@@ -3718,7 +3718,7 @@ function mn(e, r) {
       } else
         b(e, "unknown escape sequence");
       t = n = e.position;
-    } else j(a) ? (K(e, t, n, !0), ut(e, A(e, !1, r)), t = n = e.position) : e.position === e.lineStart && Qe(e) ? b(e, "unexpected end of the document within a double quoted scalar") : (e.position++, n = e.position);
+    } else j(a) ? (K(e, t, n, !0), ut(e, E(e, !1, r)), t = n = e.position) : e.position === e.lineStart && Xe(e) ? b(e, "unexpected end of the document within a double quoted scalar") : (e.position++, n = e.position);
   }
   b(e, "unexpected end of the stream within a double quoted scalar");
 }
@@ -3731,9 +3731,9 @@ function bn(e, r) {
   else
     return !1;
   for (e.anchor !== null && (e.anchorMap[e.anchor] = a), y = e.input.charCodeAt(++e.position); y !== 0; ) {
-    if (A(e, !0, r), y = e.input.charCodeAt(e.position), y === d)
+    if (E(e, !0, r), y = e.input.charCodeAt(e.position), y === d)
       return e.position++, e.tag = s, e.anchor = l, e.kind = f ? "mapping" : "sequence", e.result = a, !0;
-    t ? y === 44 && b(e, "expected the node content, but found ','") : b(e, "missed comma between flow collection entries"), w = g = C = null, p = h = !1, y === 63 && (c = e.input.charCodeAt(e.position + 1), P(c) && (p = h = !0, e.position++, A(e, !0, r))), n = e.line, i = e.lineStart, o = e.position, _e(e, r, Ve, !1, !0), w = e.tag, g = e.result, A(e, !0, r), y = e.input.charCodeAt(e.position), (h || e.line === n) && y === 58 && (p = !0, y = e.input.charCodeAt(++e.position), A(e, !0, r), _e(e, r, Ve, !1, !0), C = e.result), f ? fe(e, a, m, w, g, C, n, i, o) : p ? a.push(fe(e, null, m, w, g, C, n, i, o)) : a.push(g), A(e, !0, r), y = e.input.charCodeAt(e.position), y === 44 ? (t = !0, y = e.input.charCodeAt(++e.position)) : t = !1;
+    t ? y === 44 && b(e, "expected the node content, but found ','") : b(e, "missed comma between flow collection entries"), w = g = C = null, p = h = !1, y === 63 && (c = e.input.charCodeAt(e.position + 1), P(c) && (p = h = !0, e.position++, E(e, !0, r))), n = e.line, i = e.lineStart, o = e.position, _e(e, r, Ve, !1, !0), w = e.tag, g = e.result, E(e, !0, r), y = e.input.charCodeAt(e.position), (h || e.line === n) && y === 58 && (p = !0, y = e.input.charCodeAt(++e.position), E(e, !0, r), _e(e, r, Ve, !1, !0), C = e.result), f ? fe(e, a, m, w, g, C, n, i, o) : p ? a.push(fe(e, null, m, w, g, C, n, i, o)) : a.push(g), E(e, !0, r), y = e.input.charCodeAt(e.position), y === 44 ? (t = !0, y = e.input.charCodeAt(++e.position)) : t = !1;
   }
   b(e, "unexpected end of the stream within a flow collection");
 }
@@ -3769,15 +3769,15 @@ function gn(e, r) {
       continue;
     }
     if (e.lineIndent < a) {
-      i === bt ? e.result += E.repeat(`
+      i === bt ? e.result += A.repeat(`
 `, o ? 1 + l : l) : i === rt && o && (e.result += `
 `);
       break;
     }
-    for (n ? ce(p) ? (c = !0, e.result += E.repeat(`
-`, o ? 1 + l : l)) : c ? (c = !1, e.result += E.repeat(`
-`, l + 1)) : l === 0 ? o && (e.result += " ") : e.result += E.repeat(`
-`, l) : e.result += E.repeat(`
+    for (n ? ce(p) ? (c = !0, e.result += A.repeat(`
+`, o ? 1 + l : l)) : c ? (c = !1, e.result += A.repeat(`
+`, l + 1)) : l === 0 ? o && (e.result += " ") : e.result += A.repeat(`
+`, l) : e.result += A.repeat(`
 `, o ? 1 + l : l), o = !0, s = !0, l = 0, t = e.position; !j(p) && p !== 0; )
       p = e.input.charCodeAt(++e.position);
     K(e, t, e.position, !1);
@@ -3788,11 +3788,11 @@ function yt(e, r) {
   var t, n = e.tag, i = e.anchor, o = [], s, a = !1, l;
   if (e.firstTabInLine !== -1) return !1;
   for (e.anchor !== null && (e.anchorMap[e.anchor] = o), l = e.input.charCodeAt(e.position); l !== 0 && (e.firstTabInLine !== -1 && (e.position = e.firstTabInLine, b(e, "tab characters must not be used in indentation")), !(l !== 45 || (s = e.input.charCodeAt(e.position + 1), !P(s)))); ) {
-    if (a = !0, e.position++, A(e, !0, -1) && e.lineIndent <= r) {
+    if (a = !0, e.position++, E(e, !0, -1) && e.lineIndent <= r) {
       o.push(null), l = e.input.charCodeAt(e.position);
       continue;
     }
-    if (t = e.line, _e(e, r, Vt, !1, !0), o.push(e.result), A(e, !0, -1), l = e.input.charCodeAt(e.position), (e.line === t || e.lineIndent > r) && l !== 0)
+    if (t = e.line, _e(e, r, Vt, !1, !0), o.push(e.result), E(e, !0, -1), l = e.input.charCodeAt(e.position), (e.line === t || e.lineIndent > r) && l !== 0)
       b(e, "bad indentation of a sequence entry");
     else if (e.lineIndent < r)
       break;
@@ -3822,7 +3822,7 @@ function vn(e, r, t) {
       else
         return e.tag = c, e.anchor = d, !0;
     }
-    if ((e.line === o || e.lineIndent > r) && (w && (s = e.line, a = e.lineStart, l = e.position), _e(e, r, ze, !0, i) && (w ? m = e.result : g = e.result), w || (fe(e, p, h, f, m, g, s, a, l), f = m = g = null), A(e, !0, -1), y = e.input.charCodeAt(e.position)), (e.line === o || e.lineIndent > r) && y !== 0)
+    if ((e.line === o || e.lineIndent > r) && (w && (s = e.line, a = e.lineStart, l = e.position), _e(e, r, ze, !0, i) && (w ? m = e.result : g = e.result), w || (fe(e, p, h, f, m, g, s, a, l), f = m = g = null), E(e, !0, -1), y = e.input.charCodeAt(e.position)), (e.line === o || e.lineIndent > r) && y !== 0)
       b(e, "bad indentation of a mapping entry");
     else if (e.lineIndent < r)
       break;
@@ -3862,13 +3862,13 @@ function yn(e) {
   if (n = e.input.charCodeAt(e.position), n !== 42) return !1;
   for (n = e.input.charCodeAt(++e.position), r = e.position; n !== 0 && !P(n) && !he(n); )
     n = e.input.charCodeAt(++e.position);
-  return e.position === r && b(e, "name of an alias node must contain at least one character"), t = e.input.slice(r, e.position), J.call(e.anchorMap, t) || b(e, 'unidentified alias "' + t + '"'), e.result = e.anchorMap[t], A(e, !0, -1), !0;
+  return e.position === r && b(e, "name of an alias node must contain at least one character"), t = e.input.slice(r, e.position), J.call(e.anchorMap, t) || b(e, 'unidentified alias "' + t + '"'), e.result = e.anchorMap[t], E(e, !0, -1), !0;
 }
 function _e(e, r, t, n, i) {
   var o, s, a, l = 1, c = !1, d = !1, p, h, f, m, g, w;
-  if (e.listener !== null && e.listener("open", e), e.tag = null, e.anchor = null, e.kind = null, e.result = null, o = s = a = ze === t || Vt === t, n && A(e, !0, -1) && (c = !0, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)), l === 1)
+  if (e.listener !== null && e.listener("open", e), e.tag = null, e.anchor = null, e.kind = null, e.result = null, o = s = a = ze === t || Vt === t, n && E(e, !0, -1) && (c = !0, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)), l === 1)
     for (; wn(e) || xn(e); )
-      A(e, !0, -1) ? (c = !0, a = o, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)) : a = !1;
+      E(e, !0, -1) ? (c = !0, a = o, e.lineIndent > r ? l = 1 : e.lineIndent === r ? l = 0 : e.lineIndent < r && (l = -1)) : a = !1;
   if (a && (a = c || i), (l === 1 || ze === t) && (Ve === t || Bt === t ? g = r : g = r + 1, w = e.position - e.lineStart, l === 1 ? a && (yt(e, w) || vn(e, w, g)) || bn(e, g) ? d = !0 : (s && gn(e, g) || fn(e, g) || mn(e, g) ? d = !0 : yn(e) ? (d = !0, (e.tag !== null || e.anchor !== null) && b(e, "alias node should not have any properties")) : hn(e, g, Ve === t) && (d = !0, e.tag === null && (e.tag = "?")), e.anchor !== null && (e.anchorMap[e.anchor] = e.result)) : l === 0 && (d = a && yt(e, w))), e.tag === null)
     e.anchor !== null && (e.anchorMap[e.anchor] = e.result);
   else if (e.tag === "?") {
@@ -3892,7 +3892,7 @@ function _e(e, r, t, n, i) {
 }
 function Cn(e) {
   var r = e.position, t, n, i, o = !1, s;
-  for (e.version = null, e.checkLineBreaks = e.legacy, e.tagMap = /* @__PURE__ */ Object.create(null), e.anchorMap = /* @__PURE__ */ Object.create(null); (s = e.input.charCodeAt(e.position)) !== 0 && (A(e, !0, -1), s = e.input.charCodeAt(e.position), !(e.lineIndent > 0 || s !== 37)); ) {
+  for (e.version = null, e.checkLineBreaks = e.legacy, e.tagMap = /* @__PURE__ */ Object.create(null), e.anchorMap = /* @__PURE__ */ Object.create(null); (s = e.input.charCodeAt(e.position)) !== 0 && (E(e, !0, -1), s = e.input.charCodeAt(e.position), !(e.lineIndent > 0 || s !== 37)); ) {
     for (o = !0, s = e.input.charCodeAt(++e.position), t = e.position; s !== 0 && !P(s); )
       s = e.input.charCodeAt(++e.position);
     for (n = e.input.slice(t, e.position), i = [], n.length < 1 && b(e, "directive name must not be less than one character in length"); s !== 0; ) {
@@ -3911,8 +3911,8 @@ function Cn(e) {
     }
     s !== 0 && ct(e), J.call(wt, n) ? wt[n](e, n, i) : qe(e, 'unknown document directive "' + n + '"');
   }
-  if (A(e, !0, -1), e.lineIndent === 0 && e.input.charCodeAt(e.position) === 45 && e.input.charCodeAt(e.position + 1) === 45 && e.input.charCodeAt(e.position + 2) === 45 ? (e.position += 3, A(e, !0, -1)) : o && b(e, "directives end mark is expected"), _e(e, e.lineIndent - 1, ze, !1, !0), A(e, !0, -1), e.checkLineBreaks && sn.test(e.input.slice(r, e.position)) && qe(e, "non-ASCII line breaks are interpreted as content"), e.documents.push(e.result), e.position === e.lineStart && Qe(e)) {
-    e.input.charCodeAt(e.position) === 46 && (e.position += 3, A(e, !0, -1));
+  if (E(e, !0, -1), e.lineIndent === 0 && e.input.charCodeAt(e.position) === 45 && e.input.charCodeAt(e.position + 1) === 45 && e.input.charCodeAt(e.position + 2) === 45 ? (e.position += 3, E(e, !0, -1)) : o && b(e, "directives end mark is expected"), _e(e, e.lineIndent - 1, ze, !1, !0), E(e, !0, -1), e.checkLineBreaks && sn.test(e.input.slice(r, e.position)) && qe(e, "non-ASCII line breaks are interpreted as content"), e.documents.push(e.result), e.position === e.lineStart && Xe(e)) {
+    e.input.charCodeAt(e.position) === 46 && (e.position += 3, E(e, !0, -1));
     return;
   }
   if (e.position < e.length - 1)
@@ -3938,9 +3938,9 @@ function Sn(e, r) {
     throw new N("expected a single document in the stream, but found more");
   }
 }
-var kn = Sn, An = {
+var kn = Sn, En = {
   load: kn
-}, Kt = Object.prototype.toString, Jt = Object.prototype.hasOwnProperty, pt = 65279, En = 9, Ee = 10, On = 13, Ln = 32, Rn = 33, Tn = 34, nt = 35, In = 37, Nn = 38, Pn = 39, Fn = 42, Qt = 44, Un = 45, Ye = 58, Mn = 61, $n = 62, Dn = 63, Hn = 64, Xt = 91, Zt = 93, jn = 96, er = 123, Bn = 124, tr = 125, T = {};
+}, Kt = Object.prototype.toString, Jt = Object.prototype.hasOwnProperty, pt = 65279, An = 9, Ae = 10, On = 13, Ln = 32, Rn = 33, Tn = 34, nt = 35, In = 37, Nn = 38, Pn = 39, Fn = 42, Xt = 44, Un = 45, Ye = 58, Mn = 61, $n = 62, Dn = 63, Hn = 64, Qt = 91, Zt = 93, jn = 96, er = 123, Bn = 124, tr = 125, T = {};
 T[0] = "\\0";
 T[7] = "\\a";
 T[8] = "\\b";
@@ -3991,14 +3991,14 @@ function Yn(e) {
     t = "U", n = 8;
   else
     throw new N("code point within a string may not be greater than 0xFFFFFFFF");
-  return "\\" + t + E.repeat("0", n - r.length) + r;
+  return "\\" + t + A.repeat("0", n - r.length) + r;
 }
 var Wn = 1, Oe = 2;
 function Gn(e) {
-  this.schema = e.schema || jt, this.indent = Math.max(1, e.indent || 2), this.noArrayIndent = e.noArrayIndent || !1, this.skipInvalid = e.skipInvalid || !1, this.flowLevel = E.isNothing(e.flowLevel) ? -1 : e.flowLevel, this.styleMap = qn(this.schema, e.styles || null), this.sortKeys = e.sortKeys || !1, this.lineWidth = e.lineWidth || 80, this.noRefs = e.noRefs || !1, this.noCompatMode = e.noCompatMode || !1, this.condenseFlow = e.condenseFlow || !1, this.quotingType = e.quotingType === '"' ? Oe : Wn, this.forceQuotes = e.forceQuotes || !1, this.replacer = typeof e.replacer == "function" ? e.replacer : null, this.implicitTypes = this.schema.compiledImplicit, this.explicitTypes = this.schema.compiledExplicit, this.tag = null, this.result = "", this.duplicates = [], this.usedDuplicates = null;
+  this.schema = e.schema || jt, this.indent = Math.max(1, e.indent || 2), this.noArrayIndent = e.noArrayIndent || !1, this.skipInvalid = e.skipInvalid || !1, this.flowLevel = A.isNothing(e.flowLevel) ? -1 : e.flowLevel, this.styleMap = qn(this.schema, e.styles || null), this.sortKeys = e.sortKeys || !1, this.lineWidth = e.lineWidth || 80, this.noRefs = e.noRefs || !1, this.noCompatMode = e.noCompatMode || !1, this.condenseFlow = e.condenseFlow || !1, this.quotingType = e.quotingType === '"' ? Oe : Wn, this.forceQuotes = e.forceQuotes || !1, this.replacer = typeof e.replacer == "function" ? e.replacer : null, this.implicitTypes = this.schema.compiledImplicit, this.explicitTypes = this.schema.compiledExplicit, this.tag = null, this.result = "", this.duplicates = [], this.usedDuplicates = null;
 }
 function Ct(e, r) {
-  for (var t = E.repeat(" ", r), n = 0, i = -1, o = "", s, a = e.length; n < a; )
+  for (var t = A.repeat(" ", r), n = 0, i = -1, o = "", s, a = e.length; n < a; )
     i = e.indexOf(`
 `, n), i === -1 ? (s = e.slice(n), n = a) : (s = e.slice(n, i + 1), n = i + 1), s.length && s !== `
 ` && (o += t), o += s;
@@ -4006,7 +4006,7 @@ function Ct(e, r) {
 }
 function ot(e, r) {
   return `
-` + E.repeat(" ", e.indent * r);
+` + A.repeat(" ", e.indent * r);
 }
 function Kn(e, r) {
   var t, n, i;
@@ -4016,13 +4016,13 @@ function Kn(e, r) {
   return !1;
 }
 function We(e) {
-  return e === Ln || e === En;
+  return e === Ln || e === An;
 }
 function Le(e) {
   return 32 <= e && e <= 126 || 161 <= e && e <= 55295 && e !== 8232 && e !== 8233 || 57344 <= e && e <= 65533 && e !== pt || 65536 <= e && e <= 1114111;
 }
 function _t(e) {
-  return Le(e) && e !== pt && e !== On && e !== Ee;
+  return Le(e) && e !== pt && e !== On && e !== Ae;
 }
 function St(e, r, t) {
   var n = _t(e), i = n && !We(e);
@@ -4031,13 +4031,13 @@ function St(e, r, t) {
     (t ? (
       // c = flow-in
       n
-    ) : n && e !== Qt && e !== Xt && e !== Zt && e !== er && e !== tr) && e !== nt && !(r === Ye && !i) || _t(r) && !We(r) && e === nt || r === Ye && i
+    ) : n && e !== Xt && e !== Qt && e !== Zt && e !== er && e !== tr) && e !== nt && !(r === Ye && !i) || _t(r) && !We(r) && e === nt || r === Ye && i
   );
 }
 function Jn(e) {
-  return Le(e) && e !== pt && !We(e) && e !== Un && e !== Dn && e !== Ye && e !== Qt && e !== Xt && e !== Zt && e !== er && e !== tr && e !== nt && e !== Nn && e !== Fn && e !== Rn && e !== Bn && e !== Mn && e !== $n && e !== Pn && e !== Tn && e !== In && e !== Hn && e !== jn;
+  return Le(e) && e !== pt && !We(e) && e !== Un && e !== Dn && e !== Ye && e !== Xt && e !== Qt && e !== Zt && e !== er && e !== tr && e !== nt && e !== Nn && e !== Fn && e !== Rn && e !== Bn && e !== Mn && e !== $n && e !== Pn && e !== Tn && e !== In && e !== Hn && e !== jn;
 }
-function Qn(e) {
+function Xn(e) {
   return !We(e) && e !== Ye;
 }
 function ke(e, r) {
@@ -4049,8 +4049,8 @@ function rr(e) {
   return r.test(e);
 }
 var ir = 1, st = 2, nr = 3, or = 4, de = 5;
-function Xn(e, r, t, n, i, o, s, a) {
-  var l, c = 0, d = null, p = !1, h = !1, f = n !== -1, m = -1, g = Jn(ke(e, 0)) && Qn(ke(e, e.length - 1));
+function Qn(e, r, t, n, i, o, s, a) {
+  var l, c = 0, d = null, p = !1, h = !1, f = n !== -1, m = -1, g = Jn(ke(e, 0)) && Xn(ke(e, e.length - 1));
   if (r || s)
     for (l = 0; l < e.length; c >= 65536 ? l += 2 : l++) {
       if (c = ke(e, l), !Le(c))
@@ -4059,7 +4059,7 @@ function Xn(e, r, t, n, i, o, s, a) {
     }
   else {
     for (l = 0; l < e.length; c >= 65536 ? l += 2 : l++) {
-      if (c = ke(e, l), c === Ee)
+      if (c = ke(e, l), c === Ae)
         p = !0, f && (h = h || // Foldable line = too long, and not more-indented.
         l - m - 1 > n && e[m + 1] !== " ", m = l);
       else if (!Le(c))
@@ -4080,7 +4080,7 @@ function Zn(e, r, t, n, i) {
     function l(c) {
       return Kn(e, c);
     }
-    switch (Xn(
+    switch (Qn(
       r,
       a,
       e.indent,
@@ -4095,9 +4095,9 @@ function Zn(e, r, t, n, i) {
       case st:
         return "'" + r.replace(/'/g, "''") + "'";
       case nr:
-        return "|" + kt(r, e.indent) + At(Ct(r, o));
+        return "|" + kt(r, e.indent) + Et(Ct(r, o));
       case or:
-        return ">" + kt(r, e.indent) + At(Ct(eo(r, s), o));
+        return ">" + kt(r, e.indent) + Et(Ct(eo(r, s), o));
       case de:
         return '"' + to(r) + '"';
       default:
@@ -4113,7 +4113,7 @@ function kt(e, r) {
   return t + o + `
 `;
 }
-function At(e) {
+function Et(e) {
   return e[e.length - 1] === `
 ` ? e.slice(0, -1) : e;
 }
@@ -4121,16 +4121,16 @@ function eo(e, r) {
   for (var t = /(\n+)([^\n]*)/g, n = (function() {
     var c = e.indexOf(`
 `);
-    return c = c !== -1 ? c : e.length, t.lastIndex = c, Et(e.slice(0, c), r);
+    return c = c !== -1 ? c : e.length, t.lastIndex = c, At(e.slice(0, c), r);
   })(), i = e[0] === `
 ` || e[0] === " ", o, s; s = t.exec(e); ) {
     var a = s[1], l = s[2];
     o = l[0] === " ", n += a + (!i && !o && l !== "" ? `
-` : "") + Et(l, r), i = o;
+` : "") + At(l, r), i = o;
   }
   return n;
 }
-function Et(e, r) {
+function At(e, r) {
   if (e === "" || e[0] === " ") return e;
   for (var t = / [^ ]/g, n, i = 0, o, s = 0, a = 0, l = ""; n = t.exec(e); )
     a = n.index, a - i > r && (o = s > i ? s : a, l += `
@@ -4153,7 +4153,7 @@ function ro(e, r, t) {
 function Ot(e, r, t, n) {
   var i = "", o = e.tag, s, a, l;
   for (s = 0, a = t.length; s < a; s += 1)
-    l = t[s], e.replacer && (l = e.replacer.call(t, String(s), l)), (z(e, r + 1, l, !0, !0, !1, !0) || typeof l > "u" && z(e, r + 1, null, !0, !0, !1, !0)) && ((!n || i !== "") && (i += ot(e, r)), e.dump && Ee === e.dump.charCodeAt(0) ? i += "-" : i += "- ", i += e.dump);
+    l = t[s], e.replacer && (l = e.replacer.call(t, String(s), l)), (z(e, r + 1, l, !0, !0, !1, !0) || typeof l > "u" && z(e, r + 1, null, !0, !0, !1, !0)) && ((!n || i !== "") && (i += ot(e, r)), e.dump && Ae === e.dump.charCodeAt(0) ? i += "-" : i += "- ", i += e.dump);
   e.tag = o, e.dump = i || "[]";
 }
 function io(e, r, t) {
@@ -4171,7 +4171,7 @@ function no(e, r, t, n) {
   else if (e.sortKeys)
     throw new N("sortKeys must be a boolean or a function");
   for (a = 0, l = s.length; a < l; a += 1)
-    h = "", (!n || i !== "") && (h += ot(e, r)), c = s[a], d = t[c], e.replacer && (d = e.replacer.call(t, c, d)), z(e, r + 1, c, !0, !0, !0) && (p = e.tag !== null && e.tag !== "?" || e.dump && e.dump.length > 1024, p && (e.dump && Ee === e.dump.charCodeAt(0) ? h += "?" : h += "? "), h += e.dump, p && (h += ot(e, r)), z(e, r + 1, d, !0, p) && (e.dump && Ee === e.dump.charCodeAt(0) ? h += ":" : h += ": ", h += e.dump, i += h));
+    h = "", (!n || i !== "") && (h += ot(e, r)), c = s[a], d = t[c], e.replacer && (d = e.replacer.call(t, c, d)), z(e, r + 1, c, !0, !0, !0) && (p = e.tag !== null && e.tag !== "?" || e.dump && e.dump.length > 1024, p && (e.dump && Ae === e.dump.charCodeAt(0) ? h += "?" : h += "? "), h += e.dump, p && (h += ot(e, r)), z(e, r + 1, d, !0, p) && (e.dump && Ae === e.dump.charCodeAt(0) ? h += ":" : h += ": ", h += e.dump, i += h));
   e.tag = o, e.dump = i || "{}";
 }
 function Lt(e, r, t) {
@@ -4245,7 +4245,7 @@ function so(e, r) {
 }
 var ao = so, lo = {
   dump: ao
-}, sr = An.load, Rt = lo.dump;
+}, sr = En.load, Rt = lo.dump;
 function co(e) {
   const r = Rt(e, {
     indent: 2,
@@ -4484,7 +4484,7 @@ class Se {
   }
 }
 Re = new WeakMap(), Te = new WeakMap(), Ie = new WeakMap(), Ge = new WeakMap();
-var Q, X;
+var X, Q;
 const F = class F {
   /**
    * @description 获取备注
@@ -4492,7 +4492,7 @@ const F = class F {
    * @returns {[string, string]} [origin, confuse]
    */
   static getPs(r) {
-    const t = r.split(u(F, Q));
+    const t = r.split(u(F, X));
     return [t[0], t[1]];
   }
   /**
@@ -4502,7 +4502,7 @@ const F = class F {
    * @returns {string} origin^LINK_TO^confuse
    */
   static setPs(r, t) {
-    return [this.formatPs(r), t].join(u(F, Q));
+    return [this.formatPs(r), t].join(u(F, X));
   }
   static formatPs(r) {
     return r ? r.replace(/\|/g, "-") : crypto.randomUUID();
@@ -4513,25 +4513,25 @@ const F = class F {
    * @returns {string|null} prefix
    */
   static getPrefix(r) {
-    if (!(r != null && r.includes(u(F, Q)))) return null;
-    if (u(F, X).has(r))
-      return u(F, X).get(r);
+    if (!(r != null && r.includes(u(F, X)))) return null;
+    if (u(F, Q).has(r))
+      return u(F, Q).get(r);
     const [t] = F.getPs(r);
     if (t) {
       const n = t.trim();
-      return u(F, X).set(r, n), n;
+      return u(F, Q).set(r, n), n;
     }
     return null;
   }
   static isConfigType(r) {
-    return r.includes(u(this, Q));
+    return r.includes(u(this, X));
   }
   // 清除缓存
   static clearCache() {
-    u(this, X).clear();
+    u(this, Q).clear();
   }
 };
-Q = new WeakMap(), X = new WeakMap(), x(F, Q, "^LINK_TO^"), x(F, X, /* @__PURE__ */ new Map());
+X = new WeakMap(), Q = new WeakMap(), x(F, X, "^LINK_TO^"), x(F, Q, /* @__PURE__ */ new Map());
 let S = F;
 var Z, Ne, q, U, ee, me;
 class ar extends Se {
@@ -5423,7 +5423,7 @@ class mr extends go {
     return Array.from(this.originUrls);
   }
 }
-let Ao = class {
+let Eo = class {
   async getConfig(r) {
     try {
       const n = (await Promise.all(r.map((i) => dt(i, { retries: 3 }).then((o) => o.data.text())))).map((i) => sr(i));
@@ -5480,7 +5480,7 @@ let Ao = class {
       throw new Error(`Failed to merge clash config: ${s.message || s}`);
     }
   }
-}, Eo = class {
+}, Ao = class {
   async getConfig(r) {
     try {
       const n = (await Promise.all(r.map((i) => dt(i, { retries: 3 }).then((o) => o.data.text())))).filter((i) => po(i)).map((i) => JSON.parse(i));
@@ -5551,8 +5551,8 @@ class Lo {
     k(this, "chunkCount", Number(He.CHUNK_COUNT));
     k(this, "backend", He.BACKEND);
     k(this, "parser", null);
-    k(this, "clashClient", new Ao());
-    k(this, "singboxClient", new Eo());
+    k(this, "clashClient", new Eo());
+    k(this, "singboxClient", new Ao());
     k(this, "v2rayClient", new Oo(this.vps));
     this.chunkCount = Number(r.CHUNK_COUNT ?? He.CHUNK_COUNT), this.backend = r.BACKEND ?? He.BACKEND, this.parser = null;
   }
@@ -5589,7 +5589,7 @@ class Ro {
   getOriginConfig(r) {
     var t, n;
     try {
-      return this.confuseConfig.proxies = this.restoreProxies(this.confuseConfig.proxies, r), this.confuseConfig["proxy-groups"] = (n = (t = this.confuseConfig) == null ? void 0 : t["proxy-groups"]) == null ? void 0 : n.map((i) => (i.proxies && (i.proxies = this.updateProxiesGroups(i.proxies)), i)), this.confuseConfig;
+      return this.confuseConfig.proxies = this.restoreProxies(this.confuseConfig.proxies, r), this.confuseConfig["proxy-groups"] = (n = (t = this.confuseConfig) == null ? void 0 : t["proxy-groups"]) == null ? void 0 : n.map((i) => (i.proxies && (i.proxies = this.updateProxiesGroups(i.proxies), i.proxies = this.smartHandleDirect({ ...i, proxies: i.proxies })), i)), this.confuseConfig;
     } catch (i) {
       throw new Error(`Get origin config failed: ${i.message || i}, function trace: ${i.stack}`);
     }
@@ -5600,10 +5600,14 @@ class Ro {
       return n;
     for (const i of r)
       try {
-        const [o, s] = S.getPs(i.name);
-        if (t.has(s)) {
-          const a = t.get(s);
-          a == null || a.restoreClash(i, o), n.push(i);
+        if (["DIRECT", "REJECT", "PROXY", "PROXIES", "FALLBACK"].includes(i.name.toUpperCase())) {
+          n.push(i);
+          continue;
+        }
+        const [s, a] = S.getPs(i.name);
+        if (t.has(a)) {
+          const l = t.get(a);
+          l == null || l.restoreClash(i, s), n.push(i);
         }
       } catch (o) {
         console.warn(`Restore proxies failed: ${o.message || o}, function trace: ${o.stack}`);
@@ -5613,13 +5617,168 @@ class Ro {
   }
   updateProxiesGroups(r) {
     try {
-      return r.map((t) => {
-        const [n] = S.getPs(t);
-        return n;
+      const t = r.map((n) => {
+        if (["DIRECT", "REJECT", "PROXY", "PROXIES", "FALLBACK"].includes(n.toUpperCase()))
+          return n;
+        const [o] = S.getPs(n);
+        return o;
       });
+      return r.includes("DIRECT") && !t.includes("DIRECT") && console.warn(`DIRECT was removed from proxies: ${r.join(", ")} -> ${t.join(", ")}`), t;
     } catch (t) {
       throw new Error(`Update proxies groups failed: ${t.message || t}, function trace: ${t.stack}`);
     }
+  }
+  smartHandleDirect(r) {
+    try {
+      const { name: t, proxies: n } = r, i = this.isRegionalGroup(t);
+      if ((t.includes("微软") || t.includes("bing") || t.includes("云盘") || t.includes("服务")) && (console.log(`Processing group: ${t}`), console.log(`Is regional: ${i}`), console.log(`Original proxies: ${n.join(", ")}`)), i) {
+        const o = n.filter((s) => s !== "DIRECT");
+        return o.length > 0 ? ((t.includes("微软") || t.includes("bing") || t.includes("云盘") || t.includes("服务")) && console.log(`Regional group with nodes, removing DIRECT: ${o.join(", ")}`), o) : ((t.includes("微软") || t.includes("bing") || t.includes("云盘") || t.includes("服务")) && console.log("Regional group without nodes, keeping DIRECT"), n.includes("DIRECT") ? ["DIRECT"] : n);
+      }
+      return (t.includes("微软") || t.includes("bing") || t.includes("云盘") || t.includes("服务")) && console.log(`Non-regional group, keeping original: ${n.join(", ")}`), n;
+    } catch (t) {
+      return console.warn(`Smart handle DIRECT failed: ${t.message || t}`), r.proxies;
+    }
+  }
+  isRegionalGroup(r) {
+    const t = r.toLowerCase();
+    return t.includes("微软") || t.includes("microsoft") || t.includes("bing") || t.includes("云盘") || t.includes("服务") ? !1 : [
+      // 中文地区名
+      "香港",
+      "台湾",
+      "日本",
+      "韩国",
+      "新加坡",
+      "狮城",
+      "美国",
+      "英国",
+      "德国",
+      "法国",
+      "荷兰",
+      "俄罗斯",
+      "印度",
+      "泰国",
+      "菲律宾",
+      "马来西亚",
+      "印尼",
+      "越南",
+      "土耳其",
+      "阿根廷",
+      "巴西",
+      "澳大利亚",
+      "加拿大",
+      "南非",
+      "埃及",
+      "以色列",
+      // 英文地区名
+      "hong kong",
+      "taiwan",
+      "japan",
+      "korea",
+      "singapore",
+      "united states",
+      "united kingdom",
+      "germany",
+      "france",
+      "netherlands",
+      "russia",
+      "india",
+      "thailand",
+      "philippines",
+      "malaysia",
+      "indonesia",
+      "vietnam",
+      "turkey",
+      "argentina",
+      "brazil",
+      "australia",
+      "canada",
+      // 地区代码
+      "hk",
+      "tw",
+      "jp",
+      "kr",
+      "sg",
+      "us",
+      "uk",
+      "de",
+      "fr",
+      "nl",
+      "ru",
+      "in",
+      "th",
+      "ph",
+      "my",
+      "id",
+      "vn",
+      "tr",
+      "ar",
+      "br",
+      "au",
+      "ca"
+    ].some((o) => t.includes(o)) ? !0 : [
+      "选择",
+      "select",
+      "auto",
+      "自动",
+      "手动",
+      "manual",
+      "油管",
+      "youtube",
+      "游戏",
+      "game",
+      "广告",
+      "ad",
+      "拦截",
+      "block",
+      "流媒体",
+      "streaming",
+      "视频",
+      "video",
+      "音乐",
+      "music",
+      "社交",
+      "social",
+      "聊天",
+      "chat",
+      "邮件",
+      "email",
+      "学术",
+      "academic",
+      "学术网站",
+      "scholar",
+      "google scholar",
+      "苹果",
+      "apple",
+      "icloud",
+      "itunes",
+      "app store",
+      "telegram",
+      "whatsapp",
+      "discord",
+      "twitter",
+      "facebook",
+      "instagram",
+      "tiktok",
+      "twitch",
+      "spotify",
+      "pinterest",
+      "github",
+      "gitlab",
+      "stackoverflow",
+      "reddit",
+      "quora",
+      "wikipedia",
+      "wikimedia",
+      "medium",
+      "dev.to",
+      "hackernews",
+      "direct",
+      "reject",
+      "proxy",
+      "proxies",
+      "fallback"
+    ].some((o) => t.includes(o)) ? !1 : t.includes("节点") || t.includes("node");
   }
 }
 class To {
