@@ -14,6 +14,8 @@ export class ClashClient {
             this.confuseConfig['proxy-groups'] = this.confuseConfig?.['proxy-groups']?.map(group => {
                 if (group.proxies) {
                     group.proxies = this.updateProxiesGroups(group.proxies);
+                    // 智能处理 DIRECT：对于地区节点组，如果有实际节点则移除 DIRECT
+                    group.proxies = this.smartHandleDirect({ ...group, proxies: group.proxies });
                 }
                 return group;
             });
@@ -31,6 +33,13 @@ export class ClashClient {
         }
         for (const proxy of proxies) {
             try {
+                // 跳过特殊代理名称的处理，直接保留
+                const specialProxies = ['DIRECT', 'REJECT', 'PROXY', 'PROXIES', 'FALLBACK'];
+                if (specialProxies.includes(proxy.name.toUpperCase())) {
+                    result.push(proxy);
+                    continue;
+                }
+                
                 const [originPs, confusePs] = PsUtil.getPs(proxy.name);
                 if (vpsMap.has(confusePs)) {
                     const vps = vpsMap.get(confusePs);
@@ -49,11 +58,92 @@ export class ClashClient {
     private updateProxiesGroups(proxies: string[]): string[] {
         try {
             return proxies.map(proxy => {
+                const specialProxies = ['DIRECT', 'REJECT', 'PROXY', 'PROXIES', 'FALLBACK'];
+                if (specialProxies.includes(proxy.toUpperCase())) {
+                    return proxy;
+                }
+
                 const [originPs] = PsUtil.getPs(proxy);
                 return originPs;
             });
         } catch (error: any) {
             throw new Error(`Update proxies groups failed: ${error.message || error}, function trace: ${error.stack}`);
         }
+    }
+
+    private smartHandleDirect(group: { name: string; proxies: string[]; [key: string]: any }): string[] {
+        try {
+            const { name, proxies } = group;
+            
+            // 检查是否为地区节点组
+            const isRegionalGroup = this.isRegionalGroup(name);
+
+            if (isRegionalGroup) {
+                const nonDirectProxies = proxies.filter(proxy => proxy !== 'DIRECT');
+                if (nonDirectProxies.length > 0) {
+                    return nonDirectProxies;
+                }
+                return proxies.includes('DIRECT') ? ['DIRECT'] : proxies;
+            }
+
+            return proxies;
+        } catch {
+            return group.proxies;
+        }
+    }
+
+    private isRegionalGroup(groupName: string): boolean {
+        const name = groupName.toLowerCase();
+
+        // 特殊处理微软相关服务 - 直接识别为非地区节点组
+        if (name.includes('微软') || name.includes('microsoft') ||
+            name.includes('bing') || name.includes('云盘') || name.includes('服务')) {
+            return false; // 微软相关服务不是地区节点组
+        }
+
+        // 地区节点组的关键词列表（优先检查地区关键词）
+        const regionalKeywords = [
+            // 中文地区名
+            '香港', '台湾', '日本', '韩国', '新加坡', '狮城', '美国', '英国', '德国', '法国', '荷兰',
+            '俄罗斯', '印度', '泰国', '菲律宾', '马来西亚', '印尼', '越南', '土耳其',
+            '阿根廷', '巴西', '澳大利亚', '加拿大', '南非', '埃及', '以色列',
+            // 英文地区名
+            'hong kong', 'taiwan', 'japan', 'korea', 'singapore', 'united states',
+            'united kingdom', 'germany', 'france', 'netherlands', 'russia',
+            'india', 'thailand', 'philippines', 'malaysia', 'indonesia',
+            'vietnam', 'turkey', 'argentina', 'brazil', 'australia', 'canada',
+            // 地区代码
+            'hk', 'tw', 'jp', 'kr', 'sg', 'us', 'uk', 'de', 'fr', 'nl', 'ru',
+            'in', 'th', 'ph', 'my', 'id', 'vn', 'tr', 'ar', 'br', 'au', 'ca'
+        ];
+
+        // 如果包含地区关键词，则认为是地区节点组
+        if (regionalKeywords.some(keyword => name.includes(keyword))) {
+            return true;
+        }
+
+        // 排除纯功能性代理组的关键词（不包含地区信息的纯功能组）
+        const pureFunctionalKeywords = [
+            '选择', 'select', 'auto', '自动', '手动', 'manual',
+            '油管', 'youtube',
+            '游戏', 'game', '广告', 'ad', '拦截', 'block',
+            '流媒体', 'streaming', '视频', 'video', '音乐', 'music',
+            '社交', 'social', '聊天', 'chat', '邮件', 'email',
+            '学术', 'academic', '学术网站', 'scholar', 'google scholar',
+            '苹果', 'apple', 'icloud', 'itunes', 'app store',
+            'telegram', 'whatsapp', 'discord', 'twitter', 'facebook',
+            'instagram', 'tiktok', 'twitch', 'spotify', 'pinterest',
+            'github', 'gitlab', 'stackoverflow', 'reddit', 'quora',
+            'wikipedia', 'wikimedia', 'medium', 'dev.to', 'hackernews',
+            'direct', 'reject', 'proxy', 'proxies', 'fallback'
+        ];
+
+        // 如果只包含功能性关键词且不包含地区信息，则不是地区节点组
+        if (pureFunctionalKeywords.some(keyword => name.includes(keyword))) {
+            return false;
+        }
+
+        // 默认情况下，如果包含"节点"关键词，认为是地区节点组
+        return name.includes('节点') || name.includes('node');
     }
 }
