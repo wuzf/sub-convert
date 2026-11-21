@@ -20,6 +20,21 @@ export function getUrlGroup(urls: string[], chunkCount: number = 10): string[] {
     return urlGroup;
 }
 
+/**
+ * URL.username 对 userinfo 里的 @ 会保留成 %40，不能直接当密码写回。
+ * 已经解码过的值再解一次会抛错，这时保留原值。
+ */
+export function decodeUserinfo(value: string | null | undefined): string {
+    if (!value) {
+        return '';
+    }
+    try {
+        return decodeURIComponent(value);
+    } catch {
+        return value;
+    }
+}
+
 export function isJson(text: string): boolean {
     try {
         JSON.parse(text);

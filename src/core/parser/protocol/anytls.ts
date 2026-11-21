@@ -1,4 +1,5 @@
 import type { AnytlsConfig } from '../types';
+import { decodeUserinfo } from '../../../shared';
 import { Faker } from '../../../shared/faker';
 import { PsUtil } from '../../../shared/ps';
 
@@ -46,7 +47,7 @@ export class AnytlsParser extends Faker {
         proxy.name = ps;
         proxy.server = this.originConfig.hostname ?? '';
         proxy.port = Number(this.originConfig.port ?? 0);
-        proxy.password = this.originConfig.username ?? '';
+        proxy.password = decodeUserinfo(this.originConfig.username);
         if (this.originConfig.searchParams?.has('sni')) {
             proxy.sni = this.originConfig.searchParams.get('sni') ?? '';
         }
@@ -60,7 +61,7 @@ export class AnytlsParser extends Faker {
         outbound.tag = ps;
         outbound.server = this.originConfig.hostname ?? '';
         outbound.server_port = Number(this.originConfig.port ?? 0);
-        outbound.password = this.originConfig.username ?? '';
+        outbound.password = decodeUserinfo(this.originConfig.username);
         if (outbound.tls?.server_name && this.originConfig.searchParams?.has('sni')) {
             outbound.tls.server_name = this.originConfig.searchParams.get('sni') ?? '';
         }

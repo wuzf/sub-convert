@@ -1,5 +1,5 @@
 import type { Hysteria2Config } from '../types';
-import { hasKey } from '../../../shared';
+import { decodeUserinfo, hasKey } from '../../../shared';
 import { Faker } from '../../../shared/faker';
 import { PsUtil } from '../../../shared/ps';
 
@@ -75,10 +75,10 @@ export class Hysteria2Parser extends Faker {
         proxy.server = this.originConfig.hostname ?? '';
         proxy.port = Number(this.originConfig.port ?? 0);
         if (proxy.type === 'hysteria2' && hasKey(proxy, 'password')) {
-            proxy.password = this.originConfig?.searchParams?.get('password') ?? this.originConfig.username ?? '';
+            proxy.password = this.restoreCredential('password');
         }
         if (proxy.type === 'hysteria2' && hasKey(proxy, 'auth')) {
-            proxy.auth = this.originConfig?.searchParams?.get('auth') ?? this.originConfig.username ?? '';
+            proxy.auth = this.restoreCredential('auth');
         }
 
         if (hasKey(proxy, 'down')) {
@@ -104,13 +104,23 @@ export class Hysteria2Parser extends Faker {
         }
         if (this.originConfig.searchParams?.has('insecure')) {
             proxy['skip-cert-verify'] = this.originConfig.searchParams.get('insecure') === '1';
+        } else {
+            delete proxy['skip-cert-verify'];
         }
 
         return proxy;
     }
 
+    private restoreCredential(queryKey: string): string {
+        const fromQuery = this.originConfig.searchParams?.get(queryKey);
+        if (fromQuery) {
+            return fromQuery;
+        }
+        return decodeUserinfo(this.originConfig.username);
+    }
+
     public restoreSingbox(outbound: Record<string, any>, ps: string): Record<string, any> {
-        outbound.password = this.originConfig?.searchParams?.get('password') ?? '';
+        outbound.password = this.restoreCredential('password');
         outbound.server = this.originConfig.hostname ?? '';
         outbound.server_port = Number(this.originConfig.port ?? 0);
         outbound.tag = ps;

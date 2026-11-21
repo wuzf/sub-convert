@@ -88,6 +88,16 @@ export class VlessParser extends Faker {
         }
     }
 
+    #restoreSkipCertVerify(proxy: Record<string, any>): void {
+        const params = this.originConfig.searchParams;
+        if (params?.has('allowInsecure') || params?.has('insecure')) {
+            const flag = params.get('allowInsecure') ?? params.get('insecure');
+            proxy['skip-cert-verify'] = flag === '1';
+            return;
+        }
+        delete proxy['skip-cert-verify'];
+    }
+
     public restoreClash(proxy: Record<string, any>, ps: string): Record<string, any> {
         this.#restoreWs(proxy);
         proxy.name = ps;
@@ -95,6 +105,7 @@ export class VlessParser extends Faker {
         proxy.port = Number(this.originConfig?.port ?? 0);
         proxy.uuid = this.originConfig.username ?? '';
         proxy.alpn = proxy.alpn ? proxy.alpn?.map((i: string) => decodeURIComponent(decodeURIComponent(i))) : proxy.alpn;
+        this.#restoreSkipCertVerify(proxy);
         return proxy;
     }
 

@@ -1,4 +1,5 @@
 import type { TrojanConfig } from '../types';
+import { decodeUserinfo } from '../../../shared';
 import { Faker } from '../../../shared/faker';
 import { PsUtil } from '../../../shared/ps';
 
@@ -72,13 +73,13 @@ export class TrojanParser extends Faker {
         proxy.name = ps;
         proxy.server = this.originConfig.hostname ?? '';
         proxy.port = Number(this.originConfig.port ?? 0);
-        proxy.password = this.originConfig?.username ?? '';
+        proxy.password = decodeUserinfo(this.originConfig?.username);
         proxy.alpn = proxy.alpn ? proxy.alpn.map((i: string) => decodeURIComponent(i)) : proxy.alpn;
         return proxy;
     }
 
     public restoreSingbox(outbound: Record<string, any>, ps: string): Record<string, any> {
-        outbound.password = this.originConfig?.username ?? '';
+        outbound.password = decodeUserinfo(this.originConfig?.username);
         outbound.server = this.originConfig.hostname ?? '';
         outbound.server_port = Number(this.originConfig.port ?? 0);
         outbound.tag = ps;
