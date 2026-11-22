@@ -34,6 +34,13 @@ export function hysteria2Convert(config: Record<string, any>): string {
     if (config['obfs-password']) {
         parameters.append('obfs-password', config['obfs-password']);
     }
+    // 端口跳跃不在标准分享链接里。写进查询参数只为还原，混淆链接会去掉，避免后端拒识。
+    if (config.ports !== undefined && config.ports !== null && config.ports !== '') {
+        parameters.append('ports', String(config.ports));
+    }
+    if (config.mport !== undefined && config.mport !== null && config.mport !== '') {
+        parameters.append('mport', String(config.mport));
+    }
 
     const queryString = parameters.toString();
 

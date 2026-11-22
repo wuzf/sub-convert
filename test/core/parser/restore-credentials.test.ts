@@ -50,6 +50,35 @@ describe('协议还原', () => {
         expect(proxy.port).toBe(64646);
     });
 
+    it('hysteria2 还原端口跳跃，且不把跳跃参数发给混淆链接', () => {
+        const link = hysteria2Convert({
+            server: '203.0.113.10',
+            port: 64646,
+            ports: 10000,
+            mport: 60000,
+            password,
+            name: 'hy2-hop',
+            sni: 'www.bing.com',
+            'skip-cert-verify': true
+        });
+        expect(link).toContain('ports=10000');
+        expect(link).toContain('mport=60000');
+
+        const parser = new Hysteria2Parser(link);
+        expect(parser.confuseLink).not.toContain('ports=');
+        expect(parser.confuseLink).not.toContain('mport=');
+
+        const proxy = parser.restoreClash(
+            {
+                type: 'hysteria2',
+                password: 'wrong'
+            },
+            'hy2-hop'
+        );
+        expect(proxy.ports).toBe(10000);
+        expect(proxy.mport).toBe(60000);
+    });
+
     it('hysteria2 原始链接没有 insecure 时，不保留后端注入的证书标记', () => {
         const link = `hysteria2://${encodeURIComponent(password)}@203.0.113.10:64646?sni=www.bing.com#hy2`;
         const proxy = new Hysteria2Parser(link).restoreClash(

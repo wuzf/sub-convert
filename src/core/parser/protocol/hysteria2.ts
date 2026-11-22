@@ -67,6 +67,8 @@ export class Hysteria2Parser extends Faker {
         this.#confuseConfig.hostname = this.getHostName();
         this.#confuseConfig.port = this.getPort();
         this.#confuseConfig.hash = PsUtil.setPs(this.#originPs, this.#confusePs);
+        this.#confuseConfig.searchParams.delete('ports');
+        this.#confuseConfig.searchParams.delete('mport');
         this.#confuseLink = this.#confuseConfig.href!;
     }
 
@@ -99,6 +101,9 @@ export class Hysteria2Parser extends Faker {
             proxy.delay = this.originConfig.searchParams?.get('delay') ?? 0;
         }
 
+        this.restoreHopField(proxy, 'ports');
+        this.restoreHopField(proxy, 'mport');
+
         if (this.originConfig.searchParams?.has('sni')) {
             proxy.sni = this.originConfig.searchParams?.get('sni') ?? '';
         }
@@ -109,6 +114,14 @@ export class Hysteria2Parser extends Faker {
         }
 
         return proxy;
+    }
+
+    private restoreHopField(proxy: Record<string, string | number | boolean>, key: 'ports' | 'mport'): void {
+        const value = this.originConfig.searchParams?.get(key);
+        if (!value) {
+            return;
+        }
+        proxy[key] = /^\d+$/.test(value) ? Number(value) : value;
     }
 
     private restoreCredential(queryKey: string): string {
